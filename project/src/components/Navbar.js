@@ -85,7 +85,7 @@ render() {
   return (
     <div className="my-header">
     <Router className="my-navbar">
-      <MDBNavbar className="navbar w-90"  dark expand="md">
+      <MDBNavbar className="navbar"  dark expand="md">
         <MDBNavbarBrand>
           <strong className="white-text">EventNess</strong>
         </MDBNavbarBrand>
