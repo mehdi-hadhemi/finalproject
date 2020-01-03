@@ -15,6 +15,7 @@ const App = () => {
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
           </Switch>
+          
         </BrowserRouter>
     )
 }
