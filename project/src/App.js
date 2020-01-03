@@ -9,7 +9,8 @@ const App = () => {
     return(
         <BrowserRouter>
           <NavbarMenu/>
-         
+         <p>HELLo</p>
+         <p>HELLo</p>
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
