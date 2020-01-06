@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import HomePage from './components/HomePage/HomePage';
 import EventInfo from './components/EventInfo';
 import CustomizedSteppers from './components/Profile/slidebar'
-import Footer from './components/footer'
+import Sign from './components/SignUp'
+import main from './components/Search/Main'
+
 
 const App = () => {
     return(
@@ -15,8 +17,11 @@ const App = () => {
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
+            <Route exact path='/test' component ={Sign}/>
+            
+            
           </Switch>
-          {/* <Footer/> */}
+
         </BrowserRouter>
     )
 }

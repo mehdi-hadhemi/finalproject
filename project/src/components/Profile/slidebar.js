@@ -7,7 +7,6 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
-import SettingsIcon from '@material-ui/icons/Settings';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import StepConnector from '@material-ui/core/StepConnector';
@@ -136,7 +135,6 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <SettingsIcon />,
     2: <GroupAddIcon />,
     3: <VideoLabelIcon />,
   };
@@ -242,9 +240,12 @@ render(){
                 
               {/* <Button variant="contained"  gradient='black'  className={`${useStyles.button} backButton`} disabled={this.state.activeStep === 0} onClick={this.handleBack} >
                 Back
+
+
               </Button> */}
               <button  disabled={this.state.activeStep === 0} onClick={this.handleBack} type="button" className="btn btn-outline-primary">Back</button>
               <button className="btn btn-outline-primary"
+
                onClick={this.handleNext}
               //  className={useStyles.button}
               >
