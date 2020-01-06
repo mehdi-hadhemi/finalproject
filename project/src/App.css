@@ -40,7 +40,7 @@
   width:70%;
   height: 400px;
   margin-left: 15%;
-  margin-bottom: 150px;
+  margin-bottom: 0px;
   border-radius: 14px;
   margin-top: 20px;
 }
@@ -100,4 +100,27 @@ h2{
 }
 hr{
   width:75%
+}
+.footer
+{
+  height: 100px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+  left:0;
+  background-color: #3a3e6d;
+  display: flex; 
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  
+
+}
+.footer-item{
+  /* border-right: 1px solid; */
+  color:white;
+  margin-bottom: 75px;
+}
+.footer-item:last-child{
+  border-right: none
 }

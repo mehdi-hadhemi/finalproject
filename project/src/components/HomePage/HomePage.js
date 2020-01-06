@@ -46,14 +46,14 @@ function HomePage() {
           </p>
         </div>
       </div> 
-
-      {/* <EventInfo /> */}
-      {/* <EventList /> */}
       <h2>What can cheers you up</h2>
       <hr/>
       <SponsEvent />
       <h2>Events and Statistics</h2>
       <hr/>
+
+       <EventInfo /> 
+       <EventList />
     </div>
   );
 }

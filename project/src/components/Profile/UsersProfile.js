@@ -8,7 +8,7 @@ import './profile.css'
     super(props);
     this.state = {
         Name:"",
-        Lastname:"",
+        lastname:"",
         Email:'',
         Password:'',
         Address:"",
@@ -26,7 +26,7 @@ import './profile.css'
             <div className='card'>
            
     <MDBInput label="Name" value={this.state.Name} icon="user" onChange={this.handleChange} name="Name"/>
-    <MDBInput label="lastname" value={this.state.Lastname}   onChange={this.handleChange} name="LastName" icon="user" />
+    <MDBInput label="lastname" value={this.state.Lastname}   onChange={this.handleChange} name="lastname" icon="user" />
     <MDBInput label="Email address"value={this.state.Email}  onChange={this.handleChange} name="Email" icon="envelope" />
     <MDBInput label="password"value={this.state.Password} onChange={this.handleChange}name="Password" icon="key"  />
     <MDBInput label="address" value={this.state.Address} onChange={this.handleChange} name="Address"icon="home"  />
