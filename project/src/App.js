@@ -7,6 +7,7 @@ import CustomizedSteppers from './components/Profile/slidebar'
 import Sign from './components/SignUp'
 import main from './components/Search/Main'
 
+
 const App = () => {
     return(
         <BrowserRouter>
@@ -20,7 +21,7 @@ const App = () => {
             
             
           </Switch>
-          
+
         </BrowserRouter>
     )
 }

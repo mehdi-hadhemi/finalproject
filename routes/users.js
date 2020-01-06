@@ -4,7 +4,6 @@ const { check, validationResult } = require('express-validator');
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 const jwtSecret='secret'
-
 const User=require('../models/User')
 router.post('/',[check('FirstName','please enter your firstname').not().isEmpty(),
 check('LastName','please enter your lasttname').not().isEmpty(),

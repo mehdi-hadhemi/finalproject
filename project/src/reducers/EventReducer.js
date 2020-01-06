@@ -1,11 +1,11 @@
 import uuid from 'uuid'
 
 let initialstate=[{
-    image:"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F84633761%2F173763014903%2F1%2Foriginal.20191215-214632?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C66%2C1280%2C640&s=4b4493975adec438f8ead4236030191d",
-    title:"L'Intelligence verbale - Communiquer , faire agir & influencer",
-    date:"dim. 5 janvier 2020 09:00 – 14:00 heure ",
-    adresse:"Les Berges du Lac Tunis, Tunis",
-    description:"Description<br/>Nous sommes fier de vous annoncer le Lancement de notre 9eme session de formation en intelligence verbale à TUNIS avec plus de 200 participants depuis Avril 2019 entre Tunis , Sousse et Bizerte.<br/>NLP BOOST Tunisie vous propose de développer cette intelligence, maîtriser vos mots et en ressentir le pouvoir sur vous-même et sur les autres à travers des notions théoriques , un savoir développé et simplifié pour vous , accompagné de pratique , de document de référence et d'un accompagnement de proximité .<br/>La base de notre communication, de notre influence sur les autres, de nos réalisations en chiffre d’affaire, de notre capacité à gérer les conflits, le pilier de l'écoute active, du recadrage et du questionnement n'est autre que l'intelligence verbale.A five-year-old Indian boy gets lost on the streets of Calcutta, thousands of kilometers from home. He survives many challenges before being adopted by a couple in Australia. 25 years later, he sets out to find his lost family. In 1986, Saroo was a five-year-old child in India of a poor but happy rural family.",
+    image:"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77248985%2F224881870480%2F1%2Foriginal.20191017-191008?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=f5ef3662b0ee8ff81ffed99985c38f27",
+    title:"MongoDB.local Paris",
+    date:"mar. 14 janvier 2020 08:00 – 19:00 heure ",
+    adresse:"Paris",
+    description:"Venez nous rencontrer à Paris lors de notre conférence éducative d'une journée couvrant les bases des techniques avancées de conception d'applications et de gestion de la performance Nos experts ainsi que nos clients, nos sponsors seront là !La plus grande conférence MongoDB en France offre plein d'occasions d'apprendre.les activités comprennent :Ask the Experts: rencontrez nos experts techniques pour obtenir des réponses à vos questions pour vous aider à résoudre vos problèmes.Discutez, échangez, avec nos équipes, nos clients et nos sponsors lors du petit-déjeuner, du déjeuner et du cocktail de cloture.Keynote : inspirez-vous et découvrez la prochaine étape pour MongoDB lors d'une présentation pleine de démos.Ce que vous apprendrez :Familiarisez-vous avec MongoDB Atlas Data Lake pour mieux comprendre, plus rapidement, la valeur de votre Data Lake. Découvrez MongoDB Realm : c'est tout ce dont vous avez besoin pour créer plus rapidement de meilleures applications mobiles et web.Plongez dans les fonctionnalirés de sécurité de MongoDB 4.2 qui permettent le chiffrement natif au niveau du champ coté client, à l'aide de clés gérées par le client.Apprenez à déployer, utiliser et faire évoluer votre base de données sur toutes les plateformes Cloud avec MongoDB Atlas.Soyez le premier à bénéficier des nouveautés de MongoDB 4.2Découvrez les meilleures pratiques des experts sur des sujets tels que la migration dans le Cloud, les analysés, les transactions distribuées multi-documents, les performances de requête...Bref, une journée de sessions techniques, pratiques et approfondies qui vous fournira les outils dont vous avez besoin pour créer et déployer vos idées de géant !L'entrée comprend le petit déjeuner, l'accès à toutes les sessions, le déjeuner ainsi que le cocktail de cloture.Les places sont limitées. Réservez dès aujourd'hui.",
     id:uuid()
     
   },
@@ -14,7 +14,7 @@ let initialstate=[{
     title:"New Years Eve at Mansion Antwerp",
     date:'31 dec. 2019, 23:00',
     adresse:"New york",
-    description:"♛♛♛♛ MANSION ANTWERP ♛♛♛♛♛<br/>Proudly Presents:♛♛♛♛♛ NEW YEAR'S EVE ♛♛♛♛<br/>Let's end this year in style.Come and party with us at the biggest and most unbelievable NYE Party in A-town...Expect Dancers, Acrobats, Fireworks, and a lot more...Follow us on instagram: @Mansion_Antwerp Music on this special occasion will be brought to you by:<br/>- Nick Dillinger<br/>- FUNKTASTIX<br/>- DJ OH-G<br/>- DJ XO<br/>- DJ Joran<br/>Dresscode: Casual chique<br/>DOOR: 30 EUR<br/>VIP: jimmy@blueflame.be<br/>whatsapp : +32 479.54.12.97<br/>DOORS OPEN AT 23.00<br/>MANSION ♥ YOU!!!!!!!!",
+    description:"♛♛♛♛ MANSION ANTWERP ♛♛♛♛♛Proudly Presents:♛♛♛♛♛ NEW YEAR'S EVE ♛♛♛♛Let's end this year in style.Come and party with us at the biggest and most unbelievable NYE Party in A-town...Expect Dancers, Acrobats, Fireworks, and a lot more...Follow us on instagram: @Mansion_Antwerp Music on this special occasion will be brought to you by:- Nick Dillinger- FUNKTASTIX- DJ OH-G- DJ XO- DJ JoranDresscode: Casual chiqueDOOR: 30 EURVIP: jimmy@blueflame.bewhatsapp : +32 479.54.12.97DOORS OPEN AT 23.00MANSION ♥ YOU!!!!!!!!",
     id:uuid()
   },
   {
@@ -22,12 +22,11 @@ let initialstate=[{
     title:"Digital Transformation Training in Paris | Introduction to Digital Transfor...",
     date:"Tue, December 31, 2019 2:30 AM – 4:30 AM CET",
     adresse:"Paris",
-    description:"Description Digital Transformation training is a LIVE Instructor-led training delivered from December 30, 2019 - January 23, 2020 for 16 hours over 4 weeks, 8 sessions, 2 sessions per week, 2 hours per session.<br/>WEEKLY SCHEDULE<br/>4 weeks | Monday, Thursday every week5:30 - 7:30 PM US Pacific time each day December 30, 2019 - January 23, 2020 US Pacific time Please check your local date and time for first session<br/>FEATURES AND BENEFITS4 weeks, 8 sessions, 16 hours of total Instructor led LIVE trainingTraining material, instructor handouts and access to useful resources on the cloud provided Real-life Scenarios<br/>COURSE OVERVIEW Digital Transformation is everywhere around us. We are increasingly using smartphones for communicating with friends, read news on subway screens or hail a ride via mobile apps. How does this impact our work and life? Digital Transformation may seem challenging, but it is also creating abundant new career opportunities and business growth potential. Discover how to deal with this change and take advantage of the opportunities in this digital era.",
+    description:"Description Digital Transformation training is a LIVE Instructor-led training delivered from December 30, 2019 - January 23, 2020 for 16 hours over 4 weeks, 8 sessions, 2 sessions per week, 2 hours per session.WEEKLY SCHEDULE4 weeks | Monday, Thursday every week5:30 - 7:30 PM US Pacific time each day December 30, 2019 - January 23, 2020 US Pacific time Please check your local date and time for first sessionFEATURES AND BENEFITS4 weeks, 8 sessions, 16 hours of total Instructor led LIVE trainingTraining material, instructor handouts and access to useful resources on the cloud provided Real-life ScenariosCOURSE OVERVIEW Digital Transformation is everywhere around us. We are increasingly using smartphones for communicating with friends, read news on subway screens or hail a ride via mobile apps. How does this impact our work and life? Digital Transformation may seem challenging, but it is also creating abundant new career opportunities and business growth potential. Discover how to deal with this change and take advantage of the opportunities in this digital era.",
     id:uuid()
   }]
   const EventReducer =(state=initialstate,action) => {
     switch (action.type){
-       
      default:
                   return state
     }
