@@ -1,0 +1,93 @@
+
+.background-event
+{
+    /* background-image: url('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79043845%2F235907250653%2F1%2Foriginal.20191101-142443?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C30%2C960%2C480&s=c3dd21491306f9c6569274e3fa4f3085'); */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    filter: blur(4px);
+    margin-bottom: 75px;
+}
+.background-image{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    /* background-image: url(https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79043845%2F235…s&q=75&sharp=10&rect=0%2C30%2C960%2C480&s=c3dd214…); */
+    width: 754px;
+    background-position: center;
+    height: 388px;
+    display: flex;
+}
+.time-adress{
+    height: 388px;
+    width: 316px;
+    background: #F9F8FE;
+    position: absolute;
+    top: 25%;
+    left: 62%;
+
+}
+.eventtitle{
+    max-height: 125px;
+    -webkit-line-clamp: 4;
+    font-size: 26px;
+    line-height: 20px;
+    margin-top: 33px;
+  
+}
+.eventdate{
+
+    font-size: 1rem;
+    margin-top: 20px;
+}
+.eventadress{
+    width: 300px;
+    margin-top: 42px;
+
+}
+.btn-outline-primary{
+    color:#fff;
+    background-color: #ff4552;
+    border-color: #ff4552;
+    margin-left: 100px;
+    margin-top: 62px;
+    }
+    .btn-outline-primary:hover{
+        background-color: #6c757d;
+        border-color: #6c757d;
+    
+        }
+        .btn-outline-primary:active{
+            background-color: #6c757d;
+            border-color: #6c757d;
+            }
+.description{
+    color: #6F7287;
+    font-size: 16px;
+    padding-top: 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 45px;
+}
+.event-desc{
+    width: 55%;
+    margin-left: 70px;
+}
+.about {
+
+    color: #ff4552;
+    padding-top: 36px
+}
+           
+.about-orga{
+    color: #ff4552;
+    padding-top: 36px;
+    margin-left: 70px;
+}

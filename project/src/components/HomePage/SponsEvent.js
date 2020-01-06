@@ -30,10 +30,6 @@ import Carousel from 'react-bootstrap/Carousel'
           src={this.state.img1}
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -42,11 +38,7 @@ import Carousel from 'react-bootstrap/Carousel'
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        </Carousel.Caption>
+    
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -54,11 +46,7 @@ import Carousel from 'react-bootstrap/Carousel'
           src={this.state.img3}
           alt="Third slide"
         />
-         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        </Carousel.Caption>
+     
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -66,11 +54,7 @@ import Carousel from 'react-bootstrap/Carousel'
           src={this.state.img4}
           alt="Third slide"
         />
-         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        </Carousel.Caption>
+     
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -78,11 +62,7 @@ import Carousel from 'react-bootstrap/Carousel'
           src={this.state.img5}
           alt="Third slide"
         />
-         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        </Carousel.Caption>
+     
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -90,11 +70,7 @@ import Carousel from 'react-bootstrap/Carousel'
           src={this.state.img6}
           alt="Third slide"
         />
-         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        </Carousel.Caption>
+     
       </Carousel.Item>
       <Carousel.Item>
         <img

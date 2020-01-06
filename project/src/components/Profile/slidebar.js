@@ -11,11 +11,12 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import VideoLabelIcon from '@material-ui/icons/VideoLabel';
 import StepConnector from '@material-ui/core/StepConnector';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import UsersProfile from './UsersProfile'
 import Userstags from './userstags'
-import { MDBBtn } from "mdbreact"
+// import { MDBBtn } from "mdbreact"
+
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -178,7 +179,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return    <UsersProfile/> ;
+      return   <UsersProfile/>  ;
     case 1:
       return <Userstags/>;
     case 2:
@@ -214,8 +215,8 @@ handleReset = () => {
 render(){
     const steps = getSteps();
   return (
-    <div className={useStyles.root}>
-      <Stepper alternativeLabel activeStep={this.state.activeStep} connector={<ColorlibConnector />}>
+    <div   className={useStyles.root}>
+      <Stepper   alternativeLabel activeStep={this.state.activeStep} connector={<ColorlibConnector />}>
         {steps.map(label => (
           <Step key={label}>
             <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
@@ -228,9 +229,11 @@ render(){
             <Typography className={useStyles.instructions}>
               All steps completed - you&apos;re finished
             </Typography>
-            <Button onClick={this.handleReset} className={useStyles.button}>
+            <button  className="btn btn-outline-primary" onClick={this.handleReset} 
+            // className={useStyles.button}
+            >
               Reset
-            </Button>
+            </button>
           </div>
         ) : (
           <div >
@@ -240,17 +243,16 @@ render(){
               {/* <Button variant="contained"  gradient='black'  className={`${useStyles.button} backButton`} disabled={this.state.activeStep === 0} onClick={this.handleBack} >
                 Back
               </Button> */}
-              <button className="nn">Back</button>
-            
-           
-              <MDBBtn gradient="peach"
-               variant="contained"
+              <button  disabled={this.state.activeStep === 0} onClick={this.handleBack} type="button" className="btn btn-outline-primary">Back</button>
+              <button className="btn btn-outline-primary"
                onClick={this.handleNext}
-               className={useStyles.button}
+              //  className={useStyles.button}
               >
                   {this.state.activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </MDBBtn>
+              </button>
             </div>
+           
+
           </div>
         )}
       </div>
