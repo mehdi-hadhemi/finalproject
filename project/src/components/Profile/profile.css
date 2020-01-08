@@ -1,10 +1,10 @@
-.card
+/* .card
 {
     margin: 0 auto ;
     width: 50%;
     padding: 20px;
    
-}
+} */
 /* .backButton
 {
     padding: 11px !important;
@@ -12,11 +12,11 @@
     height: 50px;
     border-radius: 20px !important;
 } */
-.PriviousNext{
+/* .PriviousNext{
     display: flex;
     justify-content: space-between;
-}
-Button{
+} */
+/* Button{ */
     /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     border: none !important;
     box-shadow: none !important;
@@ -27,8 +27,8 @@ Button{
     font-size: 15px;
     padding: .375rem .75rem; */
   
-}
-#slide{
+/* } */
+/* #slide{
     margin-top: 50px;
 }
 .btn-outline-primary{
@@ -44,5 +44,5 @@ border-color: #ff4552;
     .btn-outline-primary:active{
         background-color: #6c757d;
         border-color: #6c757d;
-        }
+        } */
        

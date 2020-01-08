@@ -30,7 +30,7 @@ import './events.css'
         const event = this.props.events.filter(el => String(el.id) === this.props.eventId)[0]
         
         return (
-                event ? <div  class="shadow-lg p-3 mb-5 bg-white rounded">
+                event ? <div>
                     <div style={{ backgroundImage: `url(${event.image})` }} className='background-event'> </div>
                    
                     <div  style={{ backgroundImage: `url(${event.image})` }} className='background-image'> </div>
@@ -38,19 +38,30 @@ import './events.css'
                         <div className='time-adress'>
                         <h2 className='eventdate'>{event.date}</h2>
                         <h4 className='eventtitle'>{event.title}</h4> 
-                        <p className='eventadress'>{event.adresse}</p>
+                        <p className='eventadress'>{event.city}</p>
                         <button class='btn btn-outline-primary'>resarvation</button>
                         </div>
                         {/* <div>
                         <button icon="heart"></button>
                         </div>   */}
                         <div className="event-desc">
-                     <h5 className="about"> About this event</h5>
-                        <p className="description">{event.description}</p>
-                        
+                            <div>
+                     <h5 style={{fontWeight:"bold"}} className="about"> About this event</h5>
+                     <h4 style={{ color: "grey" ,fontWeight:"bold"}} className='eventtitle'>{event.title}</h4> 
+                        <p  style={{width:"780px",marginLeft: "22px"}}className="description">{event.description}</p>
+                        </div>
+                        <div className='info-sup'>
+                            <p style={{ color: "grey" ,fontWeight:"bold"}}>Date and time </p>
+                        <p >{event.date}</p>
+                        <p >{event.hour}</p>
+                        <p  style={{ color: "grey" ,fontWeight:"bold"}}>location</p>
+                
+                        <p >{event.adresse}</p>
+                        <p style={{ color: "grey" ,fontWeight:"bold"}}> Refound policy</p>
+                        </div>
                     </div>
                     <hr/>
-                    <h5 className="about-orga"> About the organizer</h5>
+                    <h5 style={{fontWeight:"bold"}} className="about-orga"> About the organizer</h5>
                     </div>
 
             : null

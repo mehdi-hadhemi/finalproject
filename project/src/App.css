@@ -15,10 +15,14 @@
   letter-spacing: 2px;
 }
 .my-header{
-  width: 100%;
+  width: 100vw;
   z-index: 9999;
-  position: absolute;
+  /* position: absolute; */
   background: rgba(128, 128, 128, 0.5);
+}
+.step{
+  width: 80%!important;
+  margin: 0px auto!important;
 }
 .my-header .my-navbar{
   background: rgba(0,0,0,0.9)!important;
@@ -27,9 +31,9 @@
 .navbar
 {
   color:black;
-  margin-top: 20px;
+  /* margin-top: 20px;
   margin-right: 40px;
-  margin-left: 40px;
+  margin-left: 40px; */
   position: fixed;
   top:0;
   
@@ -108,12 +112,10 @@ hr{
   height: 100px;
 	width:100%;
 	position:absolute;
-	bottom:0;
-  left:0;
-  background-color: #3a3e6d;
+  /* left:0; */
+  background-color:#3a3e6d;
   display: flex; 
-  display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   justify-content: space-around;
   
 
@@ -121,8 +123,31 @@ hr{
 .footer-item{
   /* border-right: 1px solid; */
   color:white;
-  margin-bottom: 75px;
+  margin-bottom: 3px;
+  list-style:none;
+  margin-top: 3px;
+
 }
 .footer-item:last-child{
   border-right: none
+}
+.social-footer2{
+  display: flex;
+  list-style:none;
+ 
+ 
+}
+.fab{
+  font-size: 33px;
+  padding: 11px;
+}
+ul.social-footer2 {	margin: 0;padding: 0;	width: auto; margin-left: -50px}
+ul.social-footer2 li {display: inline-block;padding: 0;}
+ul.social-footer2 li a:hover {
+  transform: translatey(-10px);
+}
+.items{
+  display: flex;
+  width:60%;
+  justify-content: center;
 }

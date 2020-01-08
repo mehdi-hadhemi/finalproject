@@ -45,6 +45,7 @@ const useQontoStepIconStyles = makeStyles({
     color: '#eaeaf0',
     display: 'flex',
     height: 22,
+    width: '50%',
     alignItems: 'center',
   },
   active: {
@@ -159,13 +160,14 @@ ColorlibStepIcon.propTypes = {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
+    width: '80%',
   },
   button: {
     marginRight: theme.spacing(1),
   },
   instructions: {
     marginTop: theme.spacing(1),
+    width: '80%',
     marginBottom: theme.spacing(1),
   },
 }));
@@ -191,7 +193,7 @@ class CustomizedSteppers extends React.Component{
     constructor(props){
         super(props);
         this.state= {
-            activeStep:1
+            activeStep:0
         }
     }
     //   const [activeStep, setActiveStep] = React.useState(1);
@@ -234,8 +236,8 @@ render(){
             </button>
           </div>
         ) : (
-          <div >
-            <Typography className={useStyles.instructions}>{getStepContent(this.state.activeStep)}</Typography>
+          <div>
+            <Typography className={`${useStyles.instructions} step`}>{getStepContent(this.state.activeStep)}</Typography>
             <div className="PriviousNext">
                 
               {/* <Button variant="contained"  gradient='black'  className={`${useStyles.button} backButton`} disabled={this.state.activeStep === 0} onClick={this.handleBack} >

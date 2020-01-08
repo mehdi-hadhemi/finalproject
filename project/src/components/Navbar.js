@@ -73,7 +73,7 @@ MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import "../App.css";
 class NavbarPage extends Component {
-state = {
+state = { 
   isOpen: false
 };
 
@@ -84,8 +84,8 @@ toggleCollapse = () => {
 render() {
   return (
     <div className="my-header">
-    <Router className="my-navbar">
-      <MDBNavbar className="navbar w-90"  dark expand="md">
+    {/* <Router className="my-navbar"> */}
+      <MDBNavbar className="navbar w-100"  dark expand="md">
         <MDBNavbarBrand>
           <strong className="white-text">EventNess</strong>
         </MDBNavbarBrand>
@@ -121,7 +121,7 @@ render() {
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
-      </Router>
+      {/* </Router> */}
       {/* <div class="image cover bg-center h-100 w-100" style="background-image: url(&quot;//images.ctfassets.net/pzzgna09n4z0/5gpoRhZUjCacmu2s2gIYQu/81b182c8dc5da2fb0fefe7a62a969480/Img_1.png?w=2420&amp;fm=webp&amp;q=75&quot;);" data-v-71ad9e33="" data-v-0c37f5b6=""></div> */}
     </div>
     );
