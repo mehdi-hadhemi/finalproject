@@ -3,9 +3,9 @@ import {connect}from 'react-redux'
 import EventItem from './EventItem'
  const EventList=props=> {
     return (
-        <div>
+        <div className='events-container'>
             {
-       props.eventlist.map(el=> <EventItem event={el}/> )
+       props.eventlist.map(el=> <EventItem className='event-card' event={el}/> )
             }
      
         </div>
