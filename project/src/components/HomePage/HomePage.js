@@ -49,7 +49,7 @@ function HomePage() {
       <h2>What can cheers you up</h2>
       <hr/>
       <SponsEvent />
-      <h2>Events and Statistics</h2>
+      <h2 style= {{marginTop: "150px"}}>Events and Statistics</h2>
       <hr/>
 {/* 
        <EventInfo /> 

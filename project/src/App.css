@@ -159,7 +159,7 @@ ul.social-footer2 li a:hover {
   width: 100%;
   z-index: 9999;
   position: absolute;
-  background: #363e4d;
+  /* background: #363e4d; */
   margin: 0;
   height: 58px;
 }
