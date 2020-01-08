@@ -37,6 +37,7 @@
     font-size: 26px;
     line-height: 20px;
     margin-top: 33px;
+    margin-left: 22px;
   
 }
 .eventdate{
@@ -75,19 +76,28 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     line-height: 45px;
+    width:780px;
 }
 .event-desc{
-    width: 55%;
+    width: 81%;
     margin-left: 70px;
+    display: flex;
 }
 .about {
 
     color: #ff4552;
-    padding-top: 36px
+    padding-top: 36px;
+    margin-left: 22px;
 }
            
 .about-orga{
     color: #ff4552;
     padding-top: 36px;
     margin-left: 70px;
+    text-align: center;
 }
+.info-sup
+{    margin-top:149px;
+    margin-left: 60px;
+
+} 

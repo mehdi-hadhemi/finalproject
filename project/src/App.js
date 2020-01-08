@@ -6,7 +6,12 @@ import EventInfo from './components/EventInfo';
 import CustomizedSteppers from './components/Profile/slidebar'
 import Sign from './components/SignUp/SignUp'
 import main from './components/Search/Main'
+
+import Footer from './components/footer'
+
+
 import CreateEvent from './components/CreateEvent/CreateEvent'
+
 
 const App = () => {
     return(
@@ -17,11 +22,11 @@ const App = () => {
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
-            <Route exact path='/test' component ={main}/>
-            
-            
-          </Switch>
 
+            <Route exact path='/test' component ={Sign}/>
+
+          </Switch>
+          <Footer/>
         </BrowserRouter>
     )
 }
