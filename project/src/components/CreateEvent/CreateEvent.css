@@ -1,0 +1,52 @@
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.create-event input{
+  width: 400px;
+  height: 40px;
+}
+.text-muted{
+  margin-right: 250px;
+  color: #8d99ae;
+}
+.create-event h2{
+  color: #FF4552;
+  text-align: center;
+  font-weight: 400;
+}
+
+.PriviousNext{
+  padding-top: 20px;
+}
+.row{
+  justify-content: center;
+}
+.form-control{
+  width: 26%!important;
+}
+.PriviousNext{
+  display: flex;
+  justify-content: center;
+}
+#long-input{
+  
+  width: 73%!important;
+}
+.push-down{
+  margin-bottom: 25px;
+}
+/* .MuiTypography-root{
+  text-align: center;
+} */
+.input-group{
+  display: flex;
+  justify-content: center;
+  
+}
+.Sponsoring{
+ flex-direction: column;
+}

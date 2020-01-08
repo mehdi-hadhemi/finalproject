@@ -12,7 +12,7 @@ class main extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='Search'>
         <h6>When do you want to go out </h6>
         <CalendarModal/>
         <h6>Where do you want to go out</h6>

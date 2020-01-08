@@ -1,38 +1,44 @@
 
+  
 .modal-content{
-    min-width: 180%!important;
-    margin-left: -150px;
-    
-    
-  }
-  .text{
-    color: red;
-    text-align: center;
-  }
-  .btn-primary{
-    color: #fff;
-      background-color: #FF4552;
-      border-color: #FF4552;
-  }
-  .btn-primary:hover{
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  .btn-primary:active{
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-  }
- 
-  h6{
-    color: #3a3e6d
-  }
-  .container{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  min-width: 180%!important;
+  margin-left: -150px;
+  
+  
+}
+.text{
+  color: red;
+  text-align: center;
+}
+.btn-primary{
+  color: #fff;
+    background-color: #FF4552;
+    border-color: #FF4552;
+}
+.btn-primary:hover{
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-primary:active{
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.modal-open{
+  display: flex;
+  justify-content: center;
+}
+/* #root{
+  width: 430px;
+} */
+h6{
+  color: #3a3e6d
+}
+.container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.Search{
+  width: 45%;
+}
