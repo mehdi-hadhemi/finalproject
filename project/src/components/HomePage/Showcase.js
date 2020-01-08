@@ -6,7 +6,7 @@ const Showcase = () => {
       <div className="slogan"></div>
       <div className='frontground'>
         <div className="slog">
-          <h1> We create
+          <h1 className="homeTitle"> We create
           <br /> You celebrate
           <h1 className="events">EVENTS</h1>
           </h1>

@@ -24,7 +24,7 @@ class LocationSearch extends Component {
     render() {
         
         return (
-            <div className="container">
+            <div className="">
             <Select options={this.state.list} onChange={(e) => {this.setState({...this.state, selectedCity : e.label})}}/>
             
           </div>
