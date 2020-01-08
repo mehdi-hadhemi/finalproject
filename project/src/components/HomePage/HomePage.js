@@ -51,8 +51,9 @@ function HomePage() {
       <SponsEvent />
       <h2>Events and Statistics</h2>
       <hr/>
-
-     
+{/* 
+       <EventInfo /> 
+       <EventList /> */}
     </div>
   );
 }

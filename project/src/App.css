@@ -75,21 +75,20 @@
   margin-bottom: 75px;
 }
 .slog{
-  font-size: 2.5rem;
   position: absolute;
   top: 25%;
-  color: white;
   background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
   width: 900px;
   background-position: center;
   height: 420px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
  
 }
-
-
-
+.homeTitle{
+  color :white;
+}
 .events{
   color:#ff4552;
 }
@@ -101,11 +100,11 @@ justify-content: center;
   border-radius: 14px;
   margin-top: 30px;
 }
-/* h2{
+h2{
    color:#ff4552;
   margin-left: 194px;
   margin-top: 50px;
-} */
+}
 hr{
   width:75%
 }
@@ -162,12 +161,17 @@ ul.social-footer2 li a:hover {
   position: absolute;
   background: #363e4d;
   margin: 0;
+  height: 58px;
 }
 #orange{
   color: #ff4552!important;
 }
 .whitebackground{
   background: white;
+  max-height: 300px;
+  border-radius: 12px;
+  margin-right: -200px;
+  min-width: 380px;
 }
 
 

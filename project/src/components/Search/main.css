@@ -34,10 +34,6 @@ h6{
   color: #3a3e6d
 }
 .container{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 .Search{
   width: 60%;
@@ -68,4 +64,13 @@ h6{
 }
 .card-title{
   padding-left: 15px;
+}
+  font-size : 22px;
+  padding: 20px;
+}
+.buttonPickDate{
+  margin :10px 0 !important;
+}
+.selectWhere{
+  border : none;
 }
