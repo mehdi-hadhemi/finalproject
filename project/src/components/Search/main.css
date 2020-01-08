@@ -34,11 +34,14 @@ h6{
   color: #3a3e6d
 }
 .container{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 .Search{
-  width: 45%;
+  font-size : 22px;
+  padding: 20px;
+}
+.buttonPickDate{
+  margin :10px 0 !important;
+}
+.selectWhere{
+  border : none;
 }

@@ -16,8 +16,8 @@ toggle = nr => () => {
 
 render() {
   return (
-    <MDBContainer>
-    <MDBBtn color="primary" onClick={this.toggle(14)}>pick a date</MDBBtn>
+    <div>
+    <MDBBtn color="primary" className="buttonPickDate" onClick={this.toggle(14)}>pick a date</MDBBtn>
     <MDBModal isOpen={this.state.modal14} toggle={this.toggle(14)} centered>
       <MDBModalHeader toggle={this.toggle(14)}>MDBModal title</MDBModalHeader>
       <MDBModalBody>
@@ -29,7 +29,7 @@ render() {
         <MDBBtn color="primary" onClick={this.toggle(14)}>Save changes</MDBBtn>
       </MDBModalFooter>
     </MDBModal>
-  </MDBContainer>
+  </div>
     );
   }
 }

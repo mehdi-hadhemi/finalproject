@@ -8,6 +8,9 @@ class NavbarPage extends Component {
 state = { 
   isOpen: false
 };
+componentDidMount=()=>{
+  console.log(this.props)
+}
 
 toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
@@ -16,7 +19,7 @@ toggleCollapse = () => {
 render() {
   return (
     <div className="my-header">
-    {/* <Router className="my-navbar"> */}
+    {/* <Router ="my-navbar"> */}
       <MDBNavbar className="navbar w-100"  dark expand="md">
 
         <MDBNavbarBrand>
