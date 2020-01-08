@@ -114,10 +114,11 @@ hr{
 	width:100%;
 	position:absolute;
   /* left:0; */
-  background-color:#3a3e6d;
+  background-color:#445168;
   display: flex; 
   /* justify-content: center; */
   justify-content: space-around;
+  margin-top: 70px;
   
 
 }

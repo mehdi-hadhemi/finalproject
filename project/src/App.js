@@ -23,7 +23,7 @@ const App = () => {
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
 
-            <Route exact path='/test' component ={Sign}/>
+            <Route exact path='/test' component ={main}/>
 
           </Switch>
           <Footer/>
