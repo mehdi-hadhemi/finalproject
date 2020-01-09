@@ -18,6 +18,7 @@ import DatePicker from './DatePicker'
 import Location from './Location'
 import Sponsoring from './Sponsoring'
 
+
 const QontoConnector = withStyles({
   alternativeLabel: {
     top: 10,
@@ -176,10 +177,10 @@ function getSteps() {
   return ['Basic info', 'Location', 'Date and time'];
 }
 
-function getStepContent(step) {
+function getStepContent(step, props) {
   switch (step) {
     case 0:
-      return  <BasicInfo/> ;
+      return  <BasicInfo /> ;
     case 1:
       return <Location/>;
     case 2:

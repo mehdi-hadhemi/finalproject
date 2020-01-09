@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { Form, FormGroup, FormLabel, FormControl, FormText } from 'react-bootstrap'
 import { Multiselect } from 'multiselect-react-dropdown';
 import InputNumber from 'react-input-just-numbers';
-
+import { connect } from 'react-redux';
+import { addBasicInfo} from '../../actions/actions'
+import {Button} from 'react-bootstrap'
 class BasicInfo extends Component {
     constructor(props){
         super(props) 
@@ -17,7 +19,7 @@ class BasicInfo extends Component {
         }
     }
     handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({ [e.target.name]: e.target.value } );
         if(e.target.name === 'price'){
             e.target.value > 0 ? this.setState({...this.state, payfree : true}) : this.setState({...this.state, payfree : false});
             this.setState({ [e.target.name]: Number(e.target.value) });
@@ -29,6 +31,7 @@ class BasicInfo extends Component {
             e.target.value < 0 && this.setState({...this.state, maxparticipent : 0})
             
         }
+        
         
     };
 
@@ -71,9 +74,14 @@ class BasicInfo extends Component {
                     
                     </Form.Group>
                 </Form>
-
+            <Button onClick={() => this.props.addBasicInfo(this.state)}>click me</Button>
             </div>
         )
     }
 }
-export default BasicInfo
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        addBasicInfo: (x) => dispatch(addBasicInfo(x))
+    }
+}
+export default connect(null, mapDispatchToProps) (BasicInfo)

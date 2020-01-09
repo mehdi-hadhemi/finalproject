@@ -5,7 +5,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import moment from 'moment';
 import TimePicker from 'react-time-picker'
 import 'rc-time-picker/assets/index.css';
-
+import { connect } from 'react-redux';
+import { addDate} from '../../actions/actions'
+import {Button} from 'react-bootstrap'
 class DatePicker extends Component {
   constructor(props) {
     super(props);
@@ -65,9 +67,14 @@ class DatePicker extends Component {
 
 
         </div>
+        <Button onClick={() => this.props.addDate(this.state)}>Click me</Button>
       </div>
     )
   }
 }
-
-export default DatePicker
+const mapDispatchToProps = (dispatch)=>{
+  return{
+    addDate: (x) => dispatch(addDate(x))
+  }
+}
+export default connect(null, mapDispatchToProps) (DatePicker)

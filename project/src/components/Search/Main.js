@@ -5,10 +5,14 @@ import CategorySelection from './CategorySelection'
 import './main.css'  
 import "react-datepicker/dist/react-datepicker.css";
 import LocationSearch from "./LocationSearch";
-import EventList from '../EventList'
+
 
 
 class main extends React.Component {
+  constructor(props){
+    super(props)
+    
+  }
 
   render() {
     return (
@@ -19,7 +23,7 @@ class main extends React.Component {
         <LocationSearch />
         <h6>What are you interested in </h6>
         <CategorySelection />
-        <EventList/>
+        
       </div>
     );
 

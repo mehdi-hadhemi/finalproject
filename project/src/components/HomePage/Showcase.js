@@ -11,7 +11,7 @@ const Showcase = () => {
           <h1 className="events">EVENTS</h1>
           </h1>
          <div className='whitebackground'>
-          <Main className='WhiteBox' />
+          <Main className='WhiteBox' showevents={false} />
           </div>
         </div>
       </div>

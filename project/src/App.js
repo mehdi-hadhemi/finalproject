@@ -5,7 +5,7 @@ import HomePage from './components/HomePage/HomePage';
 import EventInfo from './components/EventInfo';
 import CustomizedSteppers from './components/Profile/slidebar'
 import Sign from './components/SignUp/SignUp'
-import main from './components/Search/Main'
+import Search from './components/Search/Search'
 
 import Footer from './components/footer'
 
@@ -23,7 +23,7 @@ const App = () => {
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
 
-            <Route exact path='/test' component ={main}/>
+            <Route exact path='/test' component ={CreateEvent}/>
 
           </Switch>
           <Footer/>

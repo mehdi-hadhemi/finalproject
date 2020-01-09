@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Select from 'react-select';
 import { Form } from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { addLocation} from '../../actions/actions'
+import {Button} from 'react-bootstrap'
 class Location extends Component {
     constructor(props) {
         super(props)
@@ -38,9 +41,14 @@ class Location extends Component {
 
                     
                 </Form.Group>
-                
+                <Button onClick={() => this.props.addLocation(this.state)}>click me</Button>
             </div>
         )
     }
 }
-export default Location 
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        addLocation: (x) => dispatch(addLocation(x))
+    }
+}
+export default connect(null, mapDispatchToProps) (Location) 
