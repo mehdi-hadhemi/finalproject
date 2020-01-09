@@ -11,6 +11,7 @@ import Footer from './components/footer'
 
 
 import CreateEvent from './components/CreateEvent/CreateEvent'
+import main from './components/Search/Main';
 
 
 const App = () => {

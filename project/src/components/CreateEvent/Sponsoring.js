@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { InputGroup, FormControl, Button } from 'react-bootstrap'
-import { connect } from 'react-redux';
-import { addSponsor} from '../../actions/actions'
+
 class Sponsoring extends Component {
     constructor(props){
         super(props)
@@ -25,9 +24,5 @@ class Sponsoring extends Component {
         )
     }
 }
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        addSponsor: (x) => dispatch(addSponsor(x))
-    }
-}
-export default connect(null, mapDispatchToProps) (Sponsoring)
+
+export default Sponsoring

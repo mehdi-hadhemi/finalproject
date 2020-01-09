@@ -5,9 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import moment from 'moment';
 import TimePicker from 'react-time-picker'
 import 'rc-time-picker/assets/index.css';
-import { connect } from 'react-redux';
-import { addDate} from '../../actions/actions'
-import {Button} from 'react-bootstrap'
+
 class DatePicker extends Component {
   constructor(props) {
     super(props);
@@ -20,10 +18,10 @@ class DatePicker extends Component {
     }
   }
   handleChange1 = time => {
-    this.setState({ startingHour: time })
+    this.setState({ startingHour: time },  () => this.props.step1Text('startingHour', time))
   }
   handleChange2 = time => {
-    this.setState({ endingHour: time })
+    this.setState({ endingHour: time },  () => this.props.step1Text('endingHour', time))
   }
   render() {
     const showSecond = true;
@@ -32,10 +30,10 @@ class DatePicker extends Component {
       <div>
         <h2>Tell your audience when your event starts <br /> and ends so they can make plants to attend</h2>
 
-        <Calendar
+        <Calendar name='Date'
           className="calender"
           onSelect={(startDate, endDate, validDateRange) => {
-            this.setState({ startDate: startDate, endDate: endDate })
+            this.setState({ startDate: startDate, endDate: endDate },() => this.props.step1Text('selectedOptions', {startDate: startDate, endDate : endDate}))
 
             console.log(
               startDate,
@@ -67,14 +65,11 @@ class DatePicker extends Component {
 
 
         </div>
-        <Button onClick={() => this.props.addDate(this.state)}>Click me</Button>
+        
       </div>
     )
   }
 }
-const mapDispatchToProps = (dispatch)=>{
-  return{
-    addDate: (x) => dispatch(addDate(x))
-  }
-}
-export default connect(null, mapDispatchToProps) (DatePicker)
+
+
+export default DatePicker
