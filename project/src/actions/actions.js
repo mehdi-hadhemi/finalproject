@@ -1,4 +1,5 @@
 import { ADD_EVENT_BI, ADD_EVENT_LOCATION,ADD_EVENT_DATE, ADD_EVENT_SPONSOR } from './types'
+// import axios from '.axios'
 export const addBasicInfo = (newEventBi) => {
     return {
         type: ADD_EVENT_BI,
