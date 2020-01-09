@@ -8,7 +8,8 @@ const User=require('../models/User')
 router.post('/',[check('FirstName','please enter your firstname').not().isEmpty(),
 check('LastName','please enter your lasttname').not().isEmpty(),
 check('Email','please enter your valid email').isEmail(),
-check('Password','passwort must be 6 or more caracters').not().isEmpty().isLength({min:6})],
+check('Password','passwort must be 6 or more caracters').not().isEmpty().isLength({min:6}),
+check('Address','please enter your Address').not().isEmpty(),],
 (req,res)=>{
     const errors=validationResult(req)
     if (!errors.isEmpty()){
@@ -18,14 +19,15 @@ check('Password','passwort must be 6 or more caracters').not().isEmpty().isLengt
     User.findOne({Email})
     .then(user =>{
         if(user){
-            res.json({msg:'User already exists'})
+            res.status(400).json({msg:'User already exists'})
         }
         else {
             user: new User({
                 FirstName,
                 LastName,
                 Email,
-                Password
+                Password,
+                Address
 
              })
 

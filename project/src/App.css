@@ -1,7 +1,4 @@
-/* .navbar {
 
-  background: rgba(0,0,0,0.05);
-} */
 
 .navlinks {
   font-weight: 600;
@@ -28,15 +25,23 @@
   background: rgba(0,0,0,0.9)!important;
   z-index: 999999;
 }
-.navbar
-{
-  color:black;
+/* .navbar
+{ */
   /* margin-top: 20px;
   margin-right: 40px;
   margin-left: 40px; */
-  position: fixed;
+  /* position: fixed;
   top:0;
-  
+   */
+/* } */
+.navbar {
+  /* background-color: grey; */
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+  /* background: #363e4d; */
+  margin: 0;
+  height: 58px;
 }
 
 
@@ -154,15 +159,7 @@ ul.social-footer2 li a:hover {
   width:60%;
   justify-content: center;}
 
-.navbar {
-  /* background-color: grey; */
-  width: 100%;
-  z-index: 9999;
-  position: absolute;
-  /* background: #363e4d; */
-  margin: 0;
-  height: 58px;
-}
+
 #orange{
   color: #ff4552!important;
 }

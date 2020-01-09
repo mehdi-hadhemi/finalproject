@@ -19,7 +19,7 @@ class main extends React.Component {
         <LocationSearch />
         <h6>What are you interested in </h6>
         <CategorySelection />
-        <EventList/>
+        
       </div>
     );
 

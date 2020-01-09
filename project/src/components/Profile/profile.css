@@ -1,23 +1,20 @@
-/* .card
-{
-    margin: 0 auto ;
-    width: 50%;
-    padding: 20px;
-   
-} */
-/* .backButton
-{
-    padding: 11px !important;
-    min-width: 100px !important;
-    height: 50px;
-    border-radius: 20px !important;
-} */
-/* .PriviousNext{
-    display: flex;
-    justify-content: space-between;
-} */
-/* Button{ */
-    /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+.tags {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+}
+.backButton {
+  padding: 11px !important;
+  min-width: 100px !important;
+  height: 50px;
+  border-radius: 20px !important;
+}
+.PriviousNext {
+  display: flex;
+  justify-content: space-between;
+}
+/* Button{
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     border: none !important;
     box-shadow: none !important;
     color: white !important ;
@@ -25,25 +22,22 @@
     margin: .375rem;
     text-transform: uppercase !important;
     font-size: 15px;
-    padding: .375rem .75rem; */
+    padding: .375rem .75rem;
   
-/* } */
-/* #slide{
-    margin-top: 50px;
+} */
+#slide {
+  margin-top: 50px;
 }
-.btn-outline-primary{
-color:#fff;
-background-color: #ff4552;
-border-color: #ff4552;
+.btn-outline-primary {
+  color: #fff;
+  background-color: #ff4552;
+  border-color: #ff4552;
 }
-.btn-outline-primary:hover{
-    background-color: #6c757d;
-    border-color: #6c757d;
-
-    }
-    .btn-outline-primary:active{
-        background-color: #6c757d;
-        border-color: #6c757d;
-
-        } */
-
+.btn-outline-primary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-outline-primary:active {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

@@ -47,8 +47,8 @@ h6{
   width: 120%;
 }
 .card{
-  height: 400px;
-  margin: 20px;
+  /* height: 400px;
+  margin: 20px; */
 }
 .events-container img{
  height: 180px;
@@ -65,6 +65,7 @@ h6{
 .card-title{
   padding-left: 15px;
 }
+.search{
   font-size : 22px;
   padding: 20px;
 }

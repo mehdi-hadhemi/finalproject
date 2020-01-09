@@ -1,10 +1,13 @@
 {
-  "name": "my-back-end",
+  "name": "EVENTNESS",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "server": "nodemon server.js",   
+    "project": "npm start --prefix project",
+    "projectinstall": "npm install --prefix project",
+    "dev":"concurrently \"npm run server\" \"npm run project"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +22,8 @@
     "nodemon": "^2.0.2",
     "react-filter-search": "^1.0.9",
     "react-select": "^3.0.8"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2"
   }
 }

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import './SignUp.css'
-
-
+import uuid from 'uuid'
+import {connect}from 'react-redux'
+import {login} from '../../actions/AuthActions'
+import {setAlert,removeAlert} from '../../actions/AlertAction'
 class Sign extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +27,39 @@ class Sign extends Component {
   handleChangeSignUp = e => {
     this.setState({ ...this.state, signUp: { ...this.state.signUp, [e.target.name]: e.target.value } });
   };
-  render() {
 
+  componentWillReceiveProps(nextProps){ 
+    if(nextProps.auth.isAuthenticated){
+        this.props.history.push('/')
+    }
+    if(nextProps.auth.error=== 'please register before!'|| nextProps.auth.error=== "wrong password")
+ {   let id=uuid()
+this.props.setAlert(nextProps.auth.error,"danger",id)
+setTimeout(()=> { this.props.removeAlert(id)
+    this.props.clearError()
+},5000);
+}
+
+}
+loginNow=()=>{
+  if (this.state.email === '' || this.state.password === ''){
+    let id=uuid()
+    this.props.setAlert('please register beforer','danger',id)
+    setTimeout(()=>{
+       this.props.removeAlert(id)
+    },5000)
+  }else{
+    this.props.login({
+      email:this.state.email,
+      password:this.state.password,
+    })
+  }
+}
+
+
+
+  render() {
+    
 
     return (
       <div className="SignUp">
@@ -43,7 +76,7 @@ class Sign extends Component {
                 <input className='input-SignUp' type="text" placeholder="Name" name='name' onChange={this.handleChangeSignUp} />
                 <input className='input-SignUp' type="email" placeholder="Email" name='email' onChange={this.handleChangeSignUp} />
                 <input className='input-SignUp' type="password" placeholder="Password" name='password' onChange={this.handleChangeSignUp} />
-                <button className='button-SignUp'>Sign Up</button>
+                <button onClick={this.loginNow} className='button-SignUp'>Sign Up</button>
               </form>
             </div>
             <div className="form-container-SignUp sign-in-container-SignUp">
@@ -82,5 +115,9 @@ class Sign extends Component {
     );
   }
 }
-
-export default Sign;
+const mapStateToProps=state=>{
+  return{
+    auth:state.auth
+  }
+}
+export default connect(mapStateToProps,{login ,setAlert, removeAlert}) (Sign);

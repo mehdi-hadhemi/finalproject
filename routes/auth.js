@@ -7,13 +7,13 @@ const jwtSecret='secret'
 const User=require('../models/User')
 const auth=require('../middleware/auth')
 
-router.get('/',auth,(req,res)=>{
+router.get('/user/1',auth,(req,res)=>{
    req.findById(req.user.id)
    .then(user=>res.json(user))
    .catch(err=>console.log(err.message))
 })
 
-router.post('/',[ check('email','please enter a valid email!!').isEmail(),
+router.post('/user/1',[ check('email','please enter a valid email!!').isEmail(),
 check('password','password is required!!').isEmpty(),
 ],
 (req,res)=>{
@@ -25,7 +25,7 @@ const {email ,password}=req.body
  User.findOne({email})
  .then(user=>{
    if  (!user){ 
-       return res.json({msg:"please register before!"})
+       return res.status(404).json({msg:"please register before!"})
     }else{
         bcrypt.compare(password , user.password,(err,isMatch)=>{
             if (err){
@@ -40,7 +40,7 @@ user: {id:user.id}
                  res.json({token})
              })
             }else{
-                return res.json({msg:"wrong password"})
+                return res.status(401).json({msg:"wrong password"})
             }
 
         })

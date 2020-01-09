@@ -5,7 +5,7 @@ const auth=require ('../middleware/auth')
 const {check,validationResult}=require('express-validator')
 router.get('/',auth,(req,res)=>{
     Event.find({user:req.user.id})
-    .then(events=>req.json(events))
+    .then(events=>res.json(events))
     .catch(err=>console.log(object)(err.message))
     
 })
