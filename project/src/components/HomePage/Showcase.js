@@ -10,9 +10,9 @@ const Showcase = () => {
           <br /> You celebrate
           <h1 className="events">EVENTS</h1>
           </h1>
-         <div className='whitebackground'>
+         {/* <div className='whitebackground'>
           <Main className='WhiteBox' />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

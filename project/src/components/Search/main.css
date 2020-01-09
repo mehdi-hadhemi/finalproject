@@ -38,6 +38,7 @@ h6{
 .Search{
   width: 60%;
   margin-left: 100px;
+  margin-top: 160px;
 }
 .events-container{
   display: flex;

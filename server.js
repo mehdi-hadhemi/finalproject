@@ -10,9 +10,9 @@ mongoose.connect(db ,{useUnifiedTopology:true,useNewUrlParser:true},(err)=>{
     console.log('database connected')
 })
 
-app.user('./api/user',require('./routes/users'))
-app.user('./api/auth',require('./routes/auth'))
-app.user('./api/event',require('./routes/event'))
+app.use('/api/user',require('./routes/users'))
+app.use('/api/auth',require('./routes/auth'))
+app.use('/api/event',require('./routes/events'))
 
 
  app.listen(5000,()=>console.log('server is ranning on port 5000'))

@@ -5,7 +5,7 @@ import HomePage from './components/HomePage/HomePage';
 import EventInfo from './components/EventInfo';
 import CustomizedSteppers from './components/Profile/slidebar'
 import Sign from './components/SignUp/SignUp'
-import main from './components/Search/Main'
+import Main from './components/Search/Main'
 import Alerts from './components/HomePage/Alert'
 
 import Footer from './components/footer'
@@ -20,13 +20,16 @@ if (localStorage.token){
 const App = () => {
     return(
         <BrowserRouter>
-          <NavbarMenu/>
+        {window.location.href=== 'http://localhost:3000/' ? <div className='homenav'><NavbarMenu  /></div> :<NavbarMenu  /> }
+         
           <Alerts/>
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
             <Route exact path='/user/:id' component={CustomizedSteppers}/>
             <Route exact path='/login' component ={Sign}/>
+            <Route exact path='/browse-event' component={Main}/>
+            <Route exact path='/create-event' component={CreateEvent}/>
 
           </Switch>
           <Footer/>

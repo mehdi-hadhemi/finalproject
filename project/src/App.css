@@ -1,5 +1,4 @@
 
-
 .navlinks {
   font-weight: 600;
    margin-right: 20px;
@@ -11,12 +10,12 @@
   margin-left: 30px; 
   letter-spacing: 2px;
 }
-.my-header{
+ .my-header{
   width: 100vw;
   z-index: 9999;
-  /* position: absolute; */
-  background: rgba(128, 128, 128, 0.5);
-}
+   /* position: absolute; */
+    background: rgba(128, 128, 128, 0.5);
+}  
 .step{
   width: 80%!important;
   margin: 0px auto!important;
@@ -25,26 +24,26 @@
   background: rgba(0,0,0,0.9)!important;
   z-index: 999999;
 }
-/* .navbar
-{ */
-  /* margin-top: 20px;
+ /* .navbar
+{  margin-top: 20px;
   margin-right: 40px;
-  margin-left: 40px; */
-  /* position: fixed;
+  margin-left: 40px; 
   top:0;
-   */
-/* } */
+  
+ }  */
 .navbar {
-  /* background-color: grey; */
+
   width: 100%;
   z-index: 9999;
   position: absolute;
-  /* background: #363e4d; */
   margin: 0;
   height: 58px;
 }
+.homenav{
+position: absolute;
+top:0,
 
-
+}
 .sponsimage{
   width:70%;
   height: 400px;
@@ -93,6 +92,9 @@
 }
 .homeTitle{
   color :white;
+  position: absolute;
+    top: 0;
+    left: 0;
 }
 .events{
   color:#ff4552;
@@ -119,13 +121,11 @@ hr{
 	width:100%;
 	position:absolute;
   /* left:0; */
-  background-color:#445168;
+  background-image: url('http://www.titaninfra.com/wp-content/uploads/2015/01/stage-lights-on-dark-background-hd-wallpaper.jpg');
   display: flex; 
-  /* justify-content: center; */
+  background-position: -162px 388px;
   justify-content: space-around;
   margin-top: 70px;
-  
-
 }
 .footer-item{
   /* border-right: 1px solid; */

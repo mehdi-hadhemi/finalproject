@@ -10,17 +10,17 @@ router.get('/',auth,(req,res)=>{
     
 })
 router.post('/',[auth,[
-    chek('tittle','tittle is required').not().isEmpty(),
-    chek('startingDate','startingDate is required').not().isEmpty(),
-    chek('endingDate','endingDate is required').not().isEmpty(),
-    chek('startingHour','startingHour is required').not().isEmpty(),
-    chek('endingHour','endingHour is required').not().isEmpty(),
-    chek('city','city is required').not().isEmpty(),
-    chek('adresse','adresse is required').not().isEmpty(),
-    chek('description','description is required').not().isEmpty(),
-    chek('organizer','organizer is required').not().isEmpty(),
-    chek('payfree','payfree is required').not().isEmpty(),
-    chek('maxparticipent','maxparticipent is required').not().isEmpty(),
+    check('tittle','tittle is required').not().isEmpty(),
+    check('startingDate','startingDate is required').not().isEmpty(),
+    check('endingDate','endingDate is required').not().isEmpty(),
+    check('startingHour','startingHour is required').not().isEmpty(),
+    check('endingHour','endingHour is required').not().isEmpty(),
+    check('city','city is required').not().isEmpty(),
+    check('adresse','adresse is required').not().isEmpty(),
+    check('description','description is required').not().isEmpty(),
+    check('organizer','organizer is required').not().isEmpty(),
+    check('payfree','payfree is required').not().isEmpty(),
+    check('maxparticipent','maxparticipent is required').not().isEmpty(),
 ]],(req,res)=>{
         const errors=validationResult(req)
         if (!errors.isEmpty()){
@@ -65,7 +65,7 @@ router.delete('/:id',auth,(req,res)=>{
      .catch(err=>console.log(err.message))
 })
 router.put('/:id',auth,(req,res)=>{
-    const  {tittle,startingDate,endingDate,startingHour,endingHour,city,adresse, description, organizer,payfree,maxparticipent }
+    const  {tittle,startingDate,endingDate,startingHour,endingHour,city,adresse, description, organizer,payfree,maxparticipent } = req.body
      let eventtags={}
          if (tittle)eventtags.tittle=tittle
          if(startingDate)eventtags.startingDate=startingDate
