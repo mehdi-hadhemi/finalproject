@@ -17,6 +17,8 @@ import BasicInfo from './BasicInfo'
 import DatePicker from './DatePicker'
 import Location from './Location'
 import Sponsoring from './Sponsoring'
+// import {Button} from 'react-bootstrap'
+
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -176,28 +178,41 @@ function getSteps() {
   return ['Basic info', 'Location', 'Date and time'];
 }
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return  <BasicInfo/> ;
-    case 1:
-      return <Location/>;
-    case 2:
-      return <DatePicker/>;
-    default:
-      return 'Unknown step';
-  }
-}
+// function getStepContent(step, props) {
+//   switch (step) {
+//     case 0:
+//       return  <BasicInfo /> ;
+//     case 1:
+//       return <Location/>;
+//     case 2:
+//       return <DatePicker/>;
+//     default:
+//       return 'Unknown step';
+//   }
+// }
 
 class CustomizedSteppers extends React.Component{
     constructor(props){
         super(props);
         this.state= {
-            activeStep:0
+            activeStep:0,
+            tittle: '',
+            description: '',
+            price: 0,
+            maxparticipent: '',
+            payfree: '',
+            selectedOptions: [],
+            adresse: '',
+            city: '',
+            Date: {},
+            startingHour:'',
+            endingHour:''
         }
     }
     //   const [activeStep, setActiveStep] = React.useState(1);
-
+    step1Text = (name, value) => {
+        this.setState({[`${name}`]: value})
+    }
     handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
     this.setState({activeStep: this.state.activeStep + 1})
@@ -212,6 +227,18 @@ handleReset = () => {
     // setActiveStep(0);
     this.setState({activeStep: 0})
 };
+ getStepContent(step, props) {
+  switch (step) {
+    case 0:
+      return  <BasicInfo step1Text={(x,y) => this.step1Text(x,y)}/> ;
+    case 1:
+      return <Location step1Text={(x,y) => this.step1Text(x,y)}/>;
+    case 2:
+      return <DatePicker  step1Text={(x,y) => this.step1Text(x,y)}/>;
+    default:
+      return 'Unknown step';
+  }
+}
 render(){
     const steps = getSteps();
   return (
@@ -228,6 +255,7 @@ render(){
           <div>
             <Typography className={useStyles.instructions}>
             <Sponsoring/>
+            <button>hi</button>
             </Typography>
             <Button onClick={this.handleReset} className={useStyles.button}>
               Reset
@@ -235,7 +263,7 @@ render(){
           </div>
         ) : (
           <div >
-            <Typography className={useStyles.instructions}>{getStepContent(this.state.activeStep)}</Typography>
+            <Typography className={useStyles.instructions}>{this.getStepContent(this.state.activeStep)}</Typography>
             <div className="PriviousNext">
                 
               <Button variant="contained"  gradient='black'  className={`${useStyles.button} backButton`} disabled={this.state.activeStep === 0} onClick={this.handleBack} >

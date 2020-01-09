@@ -39,18 +39,23 @@ h6{
   width: 60%;
   margin-left: 100px;
   margin-top: 160px;
+
 }
 .events-container{
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
   flex-wrap: wrap;
+
   width: 120%;
 }
 .card{
   /* height: 400px;
   margin: 20px; */
+=======
+  width: 80%;
 }
+
 .events-container img{
  height: 180px;
 }

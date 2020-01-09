@@ -23,7 +23,7 @@ render() {
       <MDBNavbar className="navbar w-100"  dark expand="md">
 
         <MDBNavbarBrand>
-          <strong className="white-text">EventNess</strong>
+          <strong className="white-text">Event <strong className='ness'>Ness</strong></strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>

@@ -122,6 +122,8 @@ hr{
 	position:absolute;
   /* left:0; */
   background-image: url('http://www.titaninfra.com/wp-content/uploads/2015/01/stage-lights-on-dark-background-hd-wallpaper.jpg');
+
+  background-color:#445168;
   display: flex; 
   background-position: -162px 388px;
   justify-content: space-around;
