@@ -5,7 +5,7 @@ import CategorySelection from './CategorySelection'
 import './main.css'  
 import "react-datepicker/dist/react-datepicker.css";
 import LocationSearch from "./LocationSearch";
-
+import EventList from '../EventList'
 
 
 class main extends React.Component {

@@ -10,9 +10,7 @@ const Showcase = () => {
           <br /> You celebrate
           <h1 className="events">EVENTS</h1>
           </h1>
-         <div className='whitebackground'>
-          <Main className='WhiteBox' showevents={false} />
-          </div>
+
         </div>
       </div>
     </div>

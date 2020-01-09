@@ -4,10 +4,10 @@ const UserSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    LastName:{
-        type:String,
-        required:true
-    },
+    // LastName:{
+    //     type:String,
+    //     required:true
+    // },
     Email:{
         type:String,
         required:true
@@ -17,7 +17,7 @@ const UserSchema=mongoose.Schema({
         required:true
     },
     Date:{
-        type:String,
+        type:Date,
         default:Date.now
     }
 

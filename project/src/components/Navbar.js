@@ -33,16 +33,16 @@ render() {
           </MDBNavbarNav>
           <MDBNavbarNav right>
              <MDBNavItem active>
-              <MDBNavLink  className='navlinks' to="#!">Overview</MDBNavLink>
+              <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink   className='navlinks'to="#!">Browse Event</MDBNavLink>
+              <MDBNavLink   className='navlinks'to="browse-event">Browse Event</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className='navlinks' to="#!">Create Event</MDBNavLink>
+              <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-            <MDBNavLink  onClick={() => window.location.reload()} className='navlinks'  to="test"><Link id='orange' to='/test'>Sign in</Link> </MDBNavLink>
+            <MDBNavLink  onClick={() => window.location.reload()} className='navlinks'  to="/login"><Link id='orange' to='/login'>Sign in</Link> </MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

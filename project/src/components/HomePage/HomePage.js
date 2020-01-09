@@ -4,8 +4,14 @@ import EventList from "../EventList";
 import SponsEvent from "./SponsEvent";
 import Showcase from "./Showcase";
 import Avatar from "@material-ui/core/Avatar";
-
-function HomePage() {
+import {connect} from 'react-redux'
+import { loadUser } from "../../actions/AuthActions";
+import { render } from "react-dom";
+class HomePage extends React.Component {
+  componentDidMount(){
+    this.props.loadUser()
+  }
+render(){
   return (
     <div className="App">
       <Showcase />
@@ -57,5 +63,5 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;
+}
+export default connect(null,{loadUser}) (HomePage);
