@@ -23,7 +23,7 @@ class LocationSearch extends Component {
         <Select className="selectWhere"
           options={this.state.list}
           onChange={e => {
-            this.setState({ ...this.state, selectedCity: e.label });
+            this.setState({ ...this.state, selectedCity: e.label }, () => this.props.step1Text('city', this.state.selectedCity));
           }}
         />
       </div>

@@ -42,7 +42,7 @@ render() {
               <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-            <MDBNavLink  onClick={() => window.location.reload()} className='navlinks'  to="/login"><Link id='orange' to='/login'>Sign in</Link> </MDBNavLink>
+            <MDBNavLink id='orange'  className='navlinks'  to="login"> Sign in</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

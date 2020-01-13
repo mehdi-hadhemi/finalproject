@@ -59,26 +59,26 @@ class BasicInfo extends Component {
                     onSelect={this.onSelect}
                     onRemove={this.onRemove}
                     displayValue="name"
-                    onSelect={(e) => this.setState({ ...this.state, selectedOptions: e }, () => this.props.step1Text('selectedOptions', e))}
+                    onSelect={(e) => this.setState({ ...this.state, selectedOptions: e }, () => this.props.step1Text('tags', e.map(el => el = el.name)))}
                 />
                         </div>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group id='number' controlId="formBasicEmail">
                     <Form.Label><h2>Set the maximum number of participants </h2></Form.Label>
-                    <InputNumber value={this.state.maxparticipent} onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} name='maxparticipent'/>
+                    <InputNumber placeholder='maximum number of participants' value={this.state.maxparticipent} onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} name='maxparticipent'/>
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                    <Form.Label><h2>Set a price for your event</h2></Form.Label>
-                    <InputNumber value={this.state.price} onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} name='price'/>
+                    <Form.Group id='price' controlId="formBasicEmail">
+                    <Form.Label ><h2>Set a price for your event</h2></Form.Label>
+                    <InputNumber placeholder='price of the ticket' value={this.state.price} onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} name='price'/>
                     
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                    <Form.Label><h2>Url of your event's picture</h2></Form.Label>
-                    <Form.Control name='img' onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} type="text"  />
+                    <Form.Group  controlId="formBasicEmail">
+                    <Form.Label ><h2>Url of your event's picture</h2></Form.Label>
+                    <Form.Control placeholder='put an url of an image ' name='img' onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} type="text"  />
                     
                     </Form.Group>
                 </Form>
-            <Button onClick={() => this.props.addBasicInfo(this.state)}>click me</Button>
+            
             </div>
         )
     }

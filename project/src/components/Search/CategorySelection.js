@@ -20,7 +20,7 @@ class CategorySelection extends Component {
                     onSelect={this.onSelect}
                     onRemove={this.onRemove}
                     displayValue="name"
-                    onSelect={(e) => this.setState({ ...this.state, selectedOptions: e })}
+                    onSelect={(e) => this.setState({ ...this.state, selectedOptions: e },() => this.props.step1Text('tags', this.state.selectedOptions.map(el => el = el.name)) )}
                 />
 
 

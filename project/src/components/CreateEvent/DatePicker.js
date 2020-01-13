@@ -18,22 +18,22 @@ class DatePicker extends Component {
     }
   }
   handleChange1 = time => {
-    this.setState({ startingHour: time },  () => this.props.step1Text('startingHour', time))
+    this.setState({ startingHour: time }, () => this.props.step1Text('startingHour', time))
   }
   handleChange2 = time => {
-    this.setState({ endingHour: time },  () => this.props.step1Text('endingHour', time))
+    this.setState({ endingHour: time }, () => this.props.step1Text('endingHour', time))
   }
   render() {
     const showSecond = true;
     const str = showSecond ? 'HH:mm:ss' : 'HH:mm';
     return (
       <div>
-        <h2>Tell your audience when your event starts <br /> and ends so they can make plants to attend</h2>
+        <h2 id='centered'>Tell your audience when your event starts <br /> and ends so they can make plants to attend</h2>
 
         <Calendar name='Date'
           className="calender"
           onSelect={(startDate, endDate, validDateRange) => {
-            this.setState({ startDate: startDate, endDate: endDate },() => this.props.step1Text('selectedOptions', {startDate: startDate, endDate : endDate}))
+            this.setState({ startDate: startDate, endDate: endDate }, () => this.props.step1Text('date', validDateRange))
 
             console.log(
               startDate,
@@ -53,19 +53,22 @@ class DatePicker extends Component {
           }}
           disablePrevDates
         />
+        <div>
+         
 
-        <h2>Pick a starting time</h2>
-        <div className='PriviousNext'>
-          <TimePicker value={this.state.startingHour}  onChange={this.handleChange1} />
+          <div className='PriviousNext'>
+          <h2>Pick a starting time:</h2>
+            <TimePicker value={this.state.startingHour} onChange={this.handleChange1} />
 
+          </div>
+         
+          <div className='PriviousNext'>
+          <h2>Pick an ending time:</h2>
+            <TimePicker onChange={this.handleChange2} value={this.state.endingHour} />
+
+
+          </div>
         </div>
-        <h2>Pick an ending time</h2>
-        <div className='PriviousNext'>
-          <TimePicker onChange={this.handleChange2} value={this.state.endingHour} />
-
-
-        </div>
-        
       </div>
     )
   }
