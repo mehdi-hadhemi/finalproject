@@ -78,6 +78,20 @@ render() {
             <MDBNavItem>
             </MDBNavItem>
           </MDBNavbarNav>
+          <MDBNavbarNav right>
+             <MDBNavItem active>
+              <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink   className='navlinks'to="browse-event">Browse Event</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+            <MDBNavLink id='orange'  className='navlinks'  to="login"> Sign in</MDBNavLink>
+            </MDBNavItem>
+          </MDBNavbarNav>
           {this.props.auth.isAuthenticated ? this.userconnected() : this.guest()}
         </MDBCollapse>
       </MDBNavbar>

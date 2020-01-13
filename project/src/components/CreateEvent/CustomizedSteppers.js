@@ -19,7 +19,11 @@ import Location from './Location'
 import Sponsoring from './Sponsoring'
 // import {Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {addEvent} from '../../actions/EventActions'
+import {addEvent } from '../../actions/EventsActions'
+import uuid from 'uuid'
+import { MDBBtn } from 'mdbreact';
+
+
 const QontoConnector = withStyles({
   alternativeLabel: {
     top: 10,
@@ -200,14 +204,14 @@ class CustomizedSteppers extends React.Component{
             description: '',
             price: 0,
             maxparticipent: '',
-            payfree: '',
-            selectedOptions: [],
+            date: [],
             adresse: '',
             city: '',
-            Date: {},
+            Date: [],
             startingHour:'',
             endingHour:'',
-            sponsoring: false
+            img: '',
+            sponsored: false
         }
     }
     //   const [activeStep, setActiveStep] = React.useState(1);
@@ -255,8 +259,8 @@ render(){
         {this.state.activeStep === steps.length ? (
           <div>
             <Typography className={useStyles.instructions}>
-            <Sponsoring step1Text={(x,y) => this.step1Text(x,y)}/>
-            <button onClick={() => this.props.addEvent}>hi</button>
+            <Sponsoring   step1Text={(x,y) => this.step1Text(x,y)}/>
+            <MDBBtn id='submit' onClick={()=> this.props.add({...this.state, id: uuid()})}>Submit your event</MDBBtn>
             </Typography>
             <Button onClick={this.handleReset} className={useStyles.button}>
               Reset
@@ -288,10 +292,11 @@ render(){
   );
 }
 }
-const mapStateToProps = (state) => {
-  return {
-      events: state.events
+const mapDispatchToProps = dispatch => {
+  return{
+    add : (x) => dispatch(addEvent(x))
   }
 }
 
-export default connect(mapStateToProps,addEvent) (CustomizedSteppers)
+
+export default connect(null, mapDispatchToProps) (CustomizedSteppers)
