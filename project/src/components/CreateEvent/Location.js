@@ -27,7 +27,7 @@ class Location extends Component {
             <div>
                 <h2>Where is the event being held</h2>
                 <div className="container push-down">
-                    <Select options={this.state.list} onChange={(e) => { this.setState({ ...this.state, city: e.label },  () => this.props.step1Text('city', e)) }} />
+                    <Select options={this.state.list} onChange={(e) => { this.setState({ ...this.state, city: e.label },  () => this.props.step1Text('city', e.target.value)) }} />
 
                     <Form.Text className="text-muted">
                         The city in which the event is held

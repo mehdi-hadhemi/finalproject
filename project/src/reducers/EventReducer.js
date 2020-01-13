@@ -1,5 +1,5 @@
 import uuid from 'uuid'
-import {ADD_EVENT_BI, ADD_EVENT_LOCATION, ADD_EVENT_DATE, ADD_EVENT_SPONSOR} from '../actions/types'
+import { ADD_EVENT } from '../actions/types'
 
 
 
@@ -27,5 +27,6 @@ let initialstate=[
      default:
         return state
     }
+
 }
 export default EventReducer
