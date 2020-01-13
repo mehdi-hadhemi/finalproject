@@ -15,7 +15,7 @@ class Sponsoring extends Component {
                     <InputGroup.Prepend className='Sponsoring'>
                     <h2>Would you like to sponor your event?</h2>
                     <h5 style={{color: 'grey'}}>Sponsored events are featured in our homepage </h5>
-                        <InputGroup.Checkbox  onChange={() => this.setState({sponsored: !this.state.sponsored}, () => this.props.addSponsor(this.state))} aria-label="Checkbox for following text input" />
+                        <InputGroup.Checkbox name='sponsoring' onChange={() => this.setState({sponsored: !this.state.sponsored}, () => this.props.step1Text('sponsoring', this.state.sponsored))} aria-label="Checkbox for following text input" />
                     </InputGroup.Prepend>
 
                 </InputGroup>

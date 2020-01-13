@@ -18,8 +18,8 @@ import DatePicker from './DatePicker'
 import Location from './Location'
 import Sponsoring from './Sponsoring'
 // import {Button} from 'react-bootstrap'
-
-
+import {connect} from 'react-redux'
+import {addEvent} from '../../actions/EventActions'
 const QontoConnector = withStyles({
   alternativeLabel: {
     top: 10,
@@ -206,7 +206,8 @@ class CustomizedSteppers extends React.Component{
             city: '',
             Date: {},
             startingHour:'',
-            endingHour:''
+            endingHour:'',
+            sponsoring: false
         }
     }
     //   const [activeStep, setActiveStep] = React.useState(1);
@@ -254,8 +255,8 @@ render(){
         {this.state.activeStep === steps.length ? (
           <div>
             <Typography className={useStyles.instructions}>
-            <Sponsoring/>
-            <button>hi</button>
+            <Sponsoring step1Text={(x,y) => this.step1Text(x,y)}/>
+            <button onClick={() => this.props.addEvent}>hi</button>
             </Typography>
             <Button onClick={this.handleReset} className={useStyles.button}>
               Reset
@@ -287,6 +288,10 @@ render(){
   );
 }
 }
+const mapStateToProps = (state) => {
+  return {
+      events: state.events
+  }
+}
 
-
-export default CustomizedSteppers
+export default connect(mapStateToProps,addEvent) (CustomizedSteppers)
