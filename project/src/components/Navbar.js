@@ -1,19 +1,66 @@
 
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,MDBIcon } from "mdbreact";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {logout} from '../actions/AuthActions'
 import "../App.css";
+import {connect} from 'react-redux'
 class NavbarPage extends Component {
 state = { 
   isOpen: false
 };
-componentDidMount=()=>{
-  console.log(this.props)
-}
+// componentDidMount=()=>{
+//   console.log(this.props)
+// }
 
 toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
+}
+userconnected=()=>{
+  return(
+  <MDBNavbarNav right>
+  <MDBNavItem active>
+   <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+   <MDBNavLink   className='navlinks'to="browse-event">Browse Event</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+   <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+   <MDBNavLink className='navlinks' to="" onClick={this.props.logout}>Logout</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+ <MDBNavLink className='navlinks'  to="/user/1">
+   <Link id='orange' to='/user/1'>hello,
+   {/* {this.props.auth.user.FirstName} */}
+   </Link> 
+  </MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+ </MDBNavItem> 
+</MDBNavbarNav>)
+}
+ guest=()=>{
+   return (
+  <MDBNavbarNav right>
+  <MDBNavItem active>
+   <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+   <MDBNavLink   className='navlinks'to="browse-event">Browse Event</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+   <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
+ </MDBNavItem>
+ <MDBNavItem>
+ <MDBNavLink  onClick={() => window.location.reload()} className='navlinks'  to="/login"><Link id='orange' to='/login'>Sign in</Link> </MDBNavLink>
+ </MDBNavItem>
+ </MDBNavbarNav>)
+
+
+
 }
 
 render() {
@@ -45,16 +92,20 @@ render() {
             <MDBNavLink id='orange'  className='navlinks'  to="login"> Sign in</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
+          {this.props.auth.isAuthenticated ? this.userconnected() : this.guest()}
         </MDBCollapse>
       </MDBNavbar>
-
-      {/* </Router> */}
-      {/* <div class="image cover bg-center h-100 w-100" style="background-image: url(&quot;//images.ctfassets.net/pzzgna09n4z0/5gpoRhZUjCacmu2s2gIYQu/81b182c8dc5da2fb0fefe7a62a969480/Img_1.png?w=2420&amp;fm=webp&amp;q=75&quot;);" data-v-71ad9e33="" data-v-0c37f5b6=""></div> */}
     </div>
 
     );
   }
 }
+const mapStateToProps=state=>{
+
+  return{
+    auth: state.auth
+  }
+}
 
 
-export default NavbarPage;
+export default connect(mapStateToProps,{logout})(NavbarPage);

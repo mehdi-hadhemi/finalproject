@@ -9,8 +9,9 @@ mongoose.connect(db ,{useUnifiedTopology:true,useNewUrlParser:true},(err)=>{
     if (err) throw (err)
     console.log('database connected')
 })
-
+// Define routes
 app.use('/api/user',require('./routes/users'))
+// app.use('/api/profil/me',require('./routes/profil/me')) 
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/event',require('./routes/events'))
 

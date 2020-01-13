@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 import { loadUser } from "../../actions/AuthActions";
 import { render } from "react-dom";
 class HomePage extends React.Component {
-  componentDidMount(){
+  componentWillMount(){
     this.props.loadUser()
   }
 render(){
@@ -56,6 +56,7 @@ render(){
       <hr/>
       <SponsEvent />
       <h2 style= {{marginTop: "150px"}}>Events and Statistics</h2>
+      
       <hr/>
 {/* 
        <EventInfo /> 

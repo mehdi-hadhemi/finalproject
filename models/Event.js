@@ -4,7 +4,12 @@ const EventSchema=mongoose.Schema({
      type:mongoose.Schema.Types.ObjectId,
      ref:'users'
     },
-    tittle:{
+    image:{
+        type:String,
+        required:true
+
+    },
+    title:{
         type:String,
         required:true
     },
