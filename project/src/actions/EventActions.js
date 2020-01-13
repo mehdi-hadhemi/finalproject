@@ -12,3 +12,6 @@ export const addEvent = newEvent => dispatch =>{
         payload: res.data
     }))
 }
+
+
+
