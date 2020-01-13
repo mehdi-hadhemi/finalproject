@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import  {ModalResrevation} from './ModalReservation'
 import './events.css'
 
 
@@ -9,7 +10,7 @@ import './events.css'
          super(props)
          this.state={
              event: {
-
+                
              }
          }
      }
@@ -36,10 +37,10 @@ import './events.css'
                     <div  style={{ backgroundImage: `url(${event.image})` }} className='background-image'> </div>
                         {/* <img src={event.image} alt=''/> */}
                         <div className='time-adress'>
-                        <h2 className='eventdate'>{event.date}</h2>
+                        <h2 className='eventdate'>{event.startingDate}</h2>
                         <h4 className='eventtitle'>{event.title}</h4> 
                         <p className='eventadress'>{event.city}</p>
-                        <button class='btn btn-outline-primary'>resarvation</button>
+                        <button class='btn btn-outline-primary' >resarvation</button>
                         </div>
                         {/* <div>
                         <button icon="heart"></button>
@@ -52,16 +53,18 @@ import './events.css'
                         </div>
                         <div className='info-sup'>
                             <p style={{ color: "grey" ,fontWeight:"bold"}}>Date and time </p>
-                        <p >{event.date}</p>
-                        <p >{event.hour}</p>
+                        <p >{event.startingDate}</p> <p >{event.endingDate}</p>
+                        <p >{event.startingHour}</p> <p >{event.endingHour}</p>
                         <p  style={{ color: "grey" ,fontWeight:"bold"}}>location</p>
-                
+
                         <p >{event.adresse}</p>
+                    <p>{event.city}</p>
                         <p style={{ color: "grey" ,fontWeight:"bold"}}> Refound policy</p>
                         </div>
                     </div>
                     <hr/>
                     <h5 style={{fontWeight:"bold"}} className="about-orga"> About the organizer</h5>
+    <h5>{this.organizer}</h5>
                     </div>
 
             : null

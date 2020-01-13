@@ -10,6 +10,7 @@ const Showcase = () => {
           <br /> You celebrate
           <h1 className="events">EVENTS</h1>
           </h1>
+          <h1 className="loup"><i class="fas fa-search"></i></h1> 
 
         </div>
       </div>

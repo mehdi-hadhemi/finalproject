@@ -66,6 +66,27 @@ function Footer() {
           </a>
         </li>
       </ul>
+      <ul className="footer-item">
+        <li>
+          <a
+            style={{ color: "white", fontWeight: "bold" }}
+            target="-blanck"
+            href="">
+            About us
+          </a>
+        </li>
+        <li>
+          <a style={{ color: "grey" }} target="-blanck" href="">
+            sponsered events{" "}
+          </a>
+        </li>
+        <li>
+          <a style={{ color: "grey" }} target="-blanck" href="">
+            statestics
+          </a>
+        </li>
+      </ul>
+
 
       <div>
         <p
