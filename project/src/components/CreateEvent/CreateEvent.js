@@ -4,6 +4,7 @@ import CustomizedSteppers from './CustomizedSteppers'
 function CreateEvent() {
   return (
     <div className='create-event'>
+      {console.log(window.location.href)}
       <CustomizedSteppers/>
     </div>
   );

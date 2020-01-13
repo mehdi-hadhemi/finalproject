@@ -117,7 +117,7 @@ hr{
 }
 .footer
 {
-  height: 100px;
+  height: 245px;
 	width:100%;
 	position:absolute;
   /* left:0; */
@@ -125,18 +125,19 @@ hr{
 
   background-color:#445168;
   display: flex; 
-  background-position: -162px 388px;
-  justify-content: space-around;
+  background-position: -321px 520px;
+  justify-content: space-between;
   margin-top: 70px;
+  padding: 1px;
 }
 .footer-item{
   /* border-right: 1px solid; */
-  color:white;
+  color: white;
   margin-bottom: 3px;
-  list-style:none;
-  margin-top: 3px;
-
+  list-style: none;
+  margin-top: 74px;
 }
+
 .footer-item:last-child{
   border-right: none
 }
@@ -194,4 +195,25 @@ ul.social-footer2 li a:hover {
 #next2{
   display: none;
 
+}
+/* ====== loup ======== */
+/* .loup{
+  
+  background-color: rgba(119, 40, 40, 0.5);
+  padding: 15px;
+  border-radius: 100%;
+  width: max-content;
+  position: absolute;
+  right: -159px;
+  top: 439px;
+} */
+.fas {
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 100%;
+  width: max-content;
+  position: absolute;
+  right: -159px;
+  top: 400px;
+  color: rgba(255, 255, 255, 0.959);
 }

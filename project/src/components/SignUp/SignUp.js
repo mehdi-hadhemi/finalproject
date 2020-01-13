@@ -9,8 +9,8 @@ class Sign extends Component {
     super(props);
     this.state = {
       signIn: {
-        email: "",
-        password: ""
+        Email: "",
+        Password: ""
       },
       signUp: {
         FirstName: "",
@@ -34,12 +34,10 @@ class Sign extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push('/');
     }
     if (
-      nextProps.auth.error === "User already exists" ||
-      nextProps.auth.error === "please register before!" ||
-      nextProps.auth.error === "wrong password"
+      nextProps.auth.error === "User already exists" ||nextProps.auth.error === "please register before!" ||nextProps.auth.error === "wrong password"
     ) {
       let id = uuid();
       this.props.setAlert(nextProps.auth.error, "danger", id);
@@ -61,8 +59,9 @@ class Sign extends Component {
   // },5000);
   // }
 
-  loginNow = () => {
-    if (this.state.email === "" || this.state.password === "") {
+  loginNow = (e) => {
+    e.preventDefault()
+    if (this.state.signIn.Email === "" || this.state.signIn.Password === "") {
       let id = uuid();
       this.props.setAlert("please register beforer", "danger", id);
       setTimeout(() => {
@@ -78,9 +77,7 @@ class Sign extends Component {
 
   registerNow = (e) => {
     if (
-      this.state.signUp.FirstName === "" ||
-      this.state.signUp.Email === "" ||
-      this.state.signUp.Password === ""
+      this.state.signUp.FirstName === "" ||this.state.signUp.Email === "" ||this.state.signUp.Password === ""
     ) {
       e.preventDefault()  
 
@@ -146,15 +143,15 @@ class Sign extends Component {
                 <div className="social-container-SignUp"></div>
                 {/* <span>or use your account</span> */}
                 <input
-                  value={this.state.signUp.Email}
+                  value={this.state.signIn.Email}
                   className="input-SignUp"
-                  type="email"
+                  type="Email"
                   placeholder="Email"
-                  name="email"
+                  name="Email"
                   onChange={this.handleChangeLoginIn}
                 />
                 <input
-                  value={this.state.signUp.Password}
+                  value={this.state.signIn.Password}
                   className="input-SignUp"
                   type="Password"
                   placeholder="Password"
@@ -162,7 +159,7 @@ class Sign extends Component {
                   onChange={this.handleChangeLoginIn}
                 />
                 {/* <a href="#">Forgot your password?</a> */}
-                <button className="button-SignUp" >Sign In</button>
+                <button className="button-SignUp" onClick={this.loginNow} >Sign In</button>
               </form>
             </div>
             <div className="overlay-container-SignUp">

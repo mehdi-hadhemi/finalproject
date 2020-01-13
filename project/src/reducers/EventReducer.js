@@ -3,17 +3,30 @@ import { ADD_EVENT } from '../actions/types'
 
 
 
-let initialstate = []
 
-const EventReducer = (state = initialstate, action) => {
-  switch (action.type) {
-    case ADD_EVENT:
-      return state.concat(action.payload)
-        
-      
+let initialstate=[
+  {
+    id: uuid(),
+    image : "",
+    title : "concert",
+    startingDate : "10/12/2020",
+    city : "sousse",
+    description : "blabla bla",
+    startingHour:"14h",
+    endingHour:"17h",
+    endingDate:"10/12/2020",
+    adresse:"khezema sousse",
+    organizer:"balalallala"
 
-    default:
-      return state
   }
+]
+
+  const EventReducer =(state=initialstate,action) => {
+    switch (action.type){
+  
+     default:
+        return state
+    }
+
 }
 export default EventReducer
