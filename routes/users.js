@@ -50,4 +50,18 @@ check('Password','passwort must be 6 or more caracters').isLength({min:6}),
 }
 )
 
+router.put('/:id', (req, res) => {
+    User.findByIdAndUpdate(req.params.id, req.body)
+        .then(user => res.json(user))
+        .catch(err => console.error(err.message))
+})
+
+// Select Fav Events
+router.put('/events/:id', (req, res) => {
+    let favEvents = req.body
+    User.findByIdAndUpdate(req.params.id, {...favEvents})
+        .then(user => res.json(user))
+        .catch(err => console.error(err.message))
+})
+
 module.exports=router ;

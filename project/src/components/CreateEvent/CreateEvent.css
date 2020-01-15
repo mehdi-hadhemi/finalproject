@@ -20,8 +20,9 @@
 .create-event h2{
   color: #FF4552;
 
-  font-weight: 350;
-  margin: 0;
+  font-weight: 300;
+    font-size: 26px;
+    margin: 0;;
 }
 
 .PriviousNext{
@@ -68,6 +69,7 @@
 }
 #centered{
   text-align: center;
+  padding-bottom: 30px;
 }
 #submit{
   background-color: #FF4552!important;
@@ -79,4 +81,24 @@
 }
 .selectWhere .css-bg1rzq-control{
   width: 26%!important;
+}
+.form{
+  margin-left: 200px;
+}
+
+/* .col-lg-5{
+
+  max-width: 26.666667% !important;
+} */
+
+.mb-3{
+  padding: 50px!important;
+}
+
+
+#spons{
+  padding: 8px 0 8px 0;
+}
+.location{
+  margin-left: 200px;
 }

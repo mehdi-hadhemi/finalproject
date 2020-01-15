@@ -1,4 +1,5 @@
-import {ADD_EVENT, ADD_FILTER} from './EventsTypes'
+import {ADD_EVENT, ADD_FILTER } from './EventsTypes'
+import {ADD_PARTICIPANT } from './types'
 export const addEvent = newEvent =>{
     return{
         type: ADD_EVENT,
@@ -12,3 +13,18 @@ export const addFilter = newFilter => {
         payload: newFilter
     }
 }
+export const addParticipant = (participantId , eventId) => {
+    return {
+        type: ADD_PARTICIPANT,
+        payload: {participantId ,eventId }
+    }
+}
+
+
+
+// export const participateEvent= (iduser,idevent)=>{
+//     return {
+//         type:PARTICIPATE_EVENT,
+//         payload:id
+//     }
+// }

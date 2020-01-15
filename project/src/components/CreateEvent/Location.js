@@ -24,7 +24,7 @@ class Location extends Component {
 
     render() {
         return (
-            <div>
+            <div className='location'>
                 <h2>Where is the event being held</h2>
                 <div className="container push-down">
                     <Select options={this.state.list} onChange={(e) => { this.setState({ ...this.state, city: e.label },  () => this.props.step1Text('city',e.label)) }} />

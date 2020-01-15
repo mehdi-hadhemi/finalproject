@@ -18,7 +18,7 @@ class Sponsoring extends Component {
                 <InputGroup className='mb-3 '>
                     <InputGroup.Prepend className='Sponsoring'>
                     <h2>Would you like to sponor your event?</h2>
-                    <h5 style={{color: 'grey'}}>Sponsored events are featured in our homepage </h5>
+                    <p id='spons' style={{color: 'grey'}}>Sponsored events are featured in our homepage </p>
                         <InputGroup.Checkbox name='sponsored'  onChange={(e) => this.Change(e)}  aria-label="Checkbox for following text input" />
                     </InputGroup.Prepend>
 

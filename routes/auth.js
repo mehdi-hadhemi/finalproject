@@ -7,8 +7,8 @@ const jwtSecret='secret'
 const User=require('../models/User')
 const auth=require('../middleware/auth')
 
+
 router.get('/login', auth, (req,res)=>{
-    console.log(req.user)
    User.findById(req.user.id)
    .then(user => res.json(user))
    .catch(err => {
@@ -25,7 +25,7 @@ check('Password','password is required!!').isEmpty(),
     if (!errors.isEmpty()){
         return res.json({errors:errors.array()})
 }
-// console.log(req.body.Email)
+console.log(req.body.Email)
 const {Email ,Password}=req.body
  User.findOne({Email})
  .then(user=>{
@@ -57,6 +57,5 @@ const {Email ,Password}=req.body
      res.send('Server Error')
     })
 })
-
 
 module.exports=router 

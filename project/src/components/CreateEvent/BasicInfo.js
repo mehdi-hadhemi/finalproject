@@ -37,7 +37,7 @@ class BasicInfo extends Component {
     render() {
         return (
             <div>
-                <Form>
+                <Form className='form'>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label><h2>Event name</h2></Form.Label>
                         <Form.Control name='tittle' onChange={(e) => this.props.step1Text(e.target.name, e.target.value)} type="text" placeholder="Enter event name" />

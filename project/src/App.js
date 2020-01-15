@@ -18,11 +18,11 @@ const App = () => {
     return(
         <BrowserRouter>
         { window.location.href=== 'http://localhost:3000/' ? <div className='homenav'><NavbarMenu  /></div> :<NavbarMenu  /> }
-         
           <Alerts/>
           <Switch>
             <Route exact path='/' component={HomePage}/>
-            <Route exact path='/event/:id' render={props => <EventInfo eventId={props.match.params.id}/>} />
+            <Route exact path='/event/:id' component ={EventInfo} />} />
+            {/* <Route exact path='/event' render={props => <EventInfo eventId={props.match.params.id}/>} /> */}
             <Route exact path='/user/:id' component={UsersProfile}/>
 
             <Route exact path='/login' component ={Sign}/>
