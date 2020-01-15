@@ -6,17 +6,16 @@ import './main.css'
 import "react-datepicker/dist/react-datepicker.css";
 import LocationSearch from "./LocationSearch";
 import EventList from '../EventList'
-import {Button} from 'react-bootstrap'
-import {connect} from 'react-redux'
-import {addFilter } from '../../actions/EventsActions'
+
+
 // import EventList from '../EventList'
 class main extends React.Component {
   constructor(props){
     super(props)
     this.state = {
      city: '',
-     tags : ['Gaming'],
-     date: []
+     tags : ['Gaming','Movies','Charity', 'Community', 'Music'],
+     date: ['1']
    
     
      
@@ -35,7 +34,7 @@ class main extends React.Component {
         <LocationSearch  step1Text={(x,y) => this.step1Text(x,y)}/>
         <h6>What are you interested in </h6>
         <CategorySelection step1Text={(x,y) => this.step1Text(x,y)} />
-        <Button onClick={() => this.props.Filter(this.state)} >Filter</Button>
+        {/* <Button onClick={() => this.props.Filter(this.state)} >Filter</Button> */}
         <EventList filter={this.state}/>
       </div>
     );
@@ -43,10 +42,5 @@ class main extends React.Component {
   }
 
 }
-const mapDispatchToProps = dispatch => {
-  return{
-    Filter : (x) => dispatch(addFilter(x))
-  }
-}
 
-export default connect(null, mapDispatchToProps) (main)
+export default main

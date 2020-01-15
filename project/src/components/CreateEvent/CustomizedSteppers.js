@@ -19,7 +19,7 @@ import Location from './Location'
 import Sponsoring from './Sponsoring'
 // import {Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {addEvent } from '../../actions/EventsActions'
+import {addEvent, addEvents } from '../../actions/EventsActions'
 import uuid from 'uuid'
 import { MDBBtn } from 'mdbreact';
 
@@ -207,7 +207,7 @@ class CustomizedSteppers extends React.Component{
             date: [],
             adresse: '',
             city: '',
-            Date: [],
+          
             startingHour:'',
             endingHour:'',
             img: '',
@@ -260,7 +260,7 @@ render(){
           <div>
             <Typography className={useStyles.instructions}>
             <Sponsoring   step1Text={(x,y) => this.step1Text(x,y)}/>
-            <MDBBtn id='submit' onClick={()=> this.props.add({...this.state, id: uuid()})}>Submit your event</MDBBtn>
+            <MDBBtn id='submit' onClick={()=> this.props.addEvents({...this.state, id: uuid(), date :[...this.state.date, '1']})}>Submit your event</MDBBtn>
             </Typography>
             <Button onClick={this.handleReset} className={useStyles.button}>
               Reset
@@ -292,11 +292,11 @@ render(){
   );
 }
 }
-const mapDispatchToProps = dispatch => {
-  return{
-    add : (x) => dispatch(addEvent(x))
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return{
+//     add : (x) => dispatch(addEvent(x))
+//   }
+// }
 
 
-export default connect(null, mapDispatchToProps) (CustomizedSteppers)
+export default connect(null, {addEvents}) (CustomizedSteppers)
