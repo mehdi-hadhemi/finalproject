@@ -5,20 +5,18 @@ import CategorySelection from "./CategorySelection";
 import "./main.css";
 import "react-datepicker/dist/react-datepicker.css";
 import LocationSearch from "./LocationSearch";
-import EventList from "../EventList";
-import { Button } from "react-bootstrap";
-import { connect } from "react-redux";
-import { addFilter } from "../../actions/EventsActions";
+import EventList from '../EventList'
 
 // import EventList from '../EventList'
 class main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: "",
-      tags: ["Gaming"],
-      date: []
-    };
+     city: '',
+     tags : ['Gaming','Movies','Charity', 'Community', 'Music'],
+     date: ['1']
+   }
+    
   }
   step1Text = (name, value) => {
     this.setState({ [`${name}`]: value });
@@ -43,3 +41,4 @@ class main extends React.Component {
 
 
 export default main;
+

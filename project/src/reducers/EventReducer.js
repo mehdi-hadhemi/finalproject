@@ -1,15 +1,19 @@
-import uuid from "uuid";
-import { ADD_EVENT, ADD_FILTER } from "../actions/EventsTypes";
+
+import uuid from 'uuid'
+import {ADD_EVENT, ADD_EVENTS,READ_EVENTS} from '../actions/EventsTypes'
 import {ADD_PARTICIPANT } from "../actions/types";
 
+
 let  initialstate=[]
-
-
-const EventReducer = (state = { events: initialstate }, action) => {
-  switch (action.type) {
-    case ADD_EVENT:
-      return { ...state, events: state.events.concat(action.payload) };
-    case ADD_PARTICIPANT:
+  const EventReducer =(state=initialstate,action) => {
+    switch (action.type){
+      case ADD_EVENT:
+        return state.concat(action.payload)
+      case ADD_EVENTS:
+        return state.concat(action.payload)
+      case READ_EVENTS:
+        return action.payload
+         case ADD_PARTICIPANT:
       return {
         ...state,
         events: state.events.map(el =>
@@ -23,9 +27,10 @@ const EventReducer = (state = { events: initialstate }, action) => {
             : el
         )
       };
+      
+     default:
+                  return state
+    }
+}
+export default EventReducer
 
-    default:
-      return state;
-  }
-};
-export default EventReducer;

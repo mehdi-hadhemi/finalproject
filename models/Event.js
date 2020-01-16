@@ -4,30 +4,34 @@ const EventSchema=mongoose.Schema({
      type:mongoose.Schema.Types.ObjectId,
      ref:'users'
     },
-    image:{
+    img:{
         type:String,
         required:true
 
     },
-    title:{
+    tittle:{
         type:String,
         required:true
     },
-    startingDate:{
-        type:Date,
-        required:true
+    date:{
+        type: Array,
+        required: true
     },
-    endingDate:{
-        type:Date,
-        required:true
-    },
+    // startingDate:{
+    //     type:Date,
+    //     required:true
+    // },
+    // endingDate:{
+    //     type:Date,
+    //     required:true
+    // },
     startingHour:{
         type:String,
-        required:true
+        required:false
     },
     endingHour:{
         type:String,
-        required:true
+        required:false
     },
     city:{
         type:String,
@@ -35,22 +39,22 @@ const EventSchema=mongoose.Schema({
     },
     adresse:{
         type:String,
-        required:true
+        required:false
        
     },
     organizer:{
         type:String,
-        required:true
+        required:false
     },
     description:{
         type:String,
         required:true
     },
-    payfree:{
-        type:Boolean,
-        required:true
+    // payfree:{
+    //     type:Boolean,
+    //     required:true
        
-    },
+    // },
     price:{
         type:Number,
         required:false
@@ -61,8 +65,12 @@ const EventSchema=mongoose.Schema({
     },
     sponsored:{
         type:Boolean,
-        required:true
+        required:false
 
+    },
+    tags: {
+        type: Array,
+        required: true
     }
 
 })
