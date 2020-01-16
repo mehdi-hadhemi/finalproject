@@ -15,6 +15,7 @@ import {connect} from 'react-redux'
             // img6: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79666891%2F163034453015%2F1%2Foriginal.20191106-170030?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C15%2C2100%2C1050&s=c57a3d5c608e5b3f2d3cac268f4f0cfb",
             // img7: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F80203311%2F365906342621%2F1%2Foriginal.20191109-232857?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C38%2C1600%2C800&s=0e3e5709afead58bf9a34b25167eb28c",
           
+
         }
     }  
     componentDidMount(){
@@ -23,6 +24,7 @@ import {connect} from 'react-redux'
       
    
     }
+
      handleSelect = (selectedIndex, e) => {
       this.setState({index: selectedIndex})
      }

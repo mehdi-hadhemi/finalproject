@@ -31,7 +31,8 @@ const UserSchema=mongoose.Schema({
         required:false
     },
     Follow:{
-        type:Array
+        type:Array,
+        required: false
     },
     Date:{
         type:Date,

@@ -17,14 +17,6 @@ const EventSchema=mongoose.Schema({
         type: Array,
         required: true
     },
-    // startingDate:{
-    //     type:Date,
-    //     required:true
-    // },
-    // endingDate:{
-    //     type:Date,
-    //     required:true
-    // },
     startingHour:{
         type:String,
         required:false
@@ -50,11 +42,6 @@ const EventSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    // payfree:{
-    //     type:Boolean,
-    //     required:true
-       
-    // },
     price:{
         type:Number,
         required:false

@@ -217,3 +217,18 @@ ul.social-footer2 li a:hover {
   top: 400px;
   color: rgba(255, 255, 255, 0.959);
 }
+ d-block{
+  height: 100%!important;
+  width: 500px;
+}
+.site-statistics{
+  margin-left: 205px;
+  margin-top: 40px;
+} 
+ .site-statistics img{
+  height: 280px;
+  width: 420px;
+} 
+.carousel-item img{
+  height: 510px;
+}

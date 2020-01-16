@@ -24,7 +24,7 @@ const EventItem = props => {
           <button className='heart'><i onClick={() => props.followEvent({...props.event, ...props.auth})} class="far fa-heart"></i></button>
           </div>
         </Card.Body>
-       
+     
       </Card>
     </div>
   );
