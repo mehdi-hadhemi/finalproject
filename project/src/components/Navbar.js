@@ -23,17 +23,17 @@ userconnected=()=>{
    <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
  </MDBNavItem>
  <MDBNavItem>
-   <MDBNavLink   className='navlinks'to="browse-event">Browse Event</MDBNavLink>
+   <MDBNavLink   className='navlinks'to="/browse-event">Browse Event</MDBNavLink>
  </MDBNavItem>
  <MDBNavItem>
-   <MDBNavLink className='navlinks' to="create-event">Create Event</MDBNavLink>
+   <MDBNavLink className='navlinks' to="/create-event">Create Event</MDBNavLink>
  </MDBNavItem>
  <MDBNavItem>
    <MDBNavLink className='navlinks' to="" onClick={this.props.logout}>Logout</MDBNavLink>
  </MDBNavItem>
  <MDBNavItem>
  <MDBNavLink className='navlinks'  to="/user/1">
-   <Link id='orange' to='/user/1'>hello,
+   <Link id='orange' to='/user/1'>My Profile
    {/* {this.props.auth.user.FirstName} */}
    </Link> 
   </MDBNavLink>
@@ -78,7 +78,7 @@ render() {
             <MDBNavItem>
             </MDBNavItem>
           </MDBNavbarNav>
-          <MDBNavbarNav right>
+          {/* <MDBNavbarNav right>
              <MDBNavItem active>
               <MDBNavLink  className='navlinks' to="/">Overview</MDBNavLink>
             </MDBNavItem>
@@ -91,7 +91,7 @@ render() {
             <MDBNavItem>
             <MDBNavLink id='orange'  className='navlinks'  to="login"> Sign in</MDBNavLink>
             </MDBNavItem>
-          </MDBNavbarNav>
+          </MDBNavbarNav> */}
           {this.props.auth.isAuthenticated ? this.userconnected() : this.guest()}
         </MDBCollapse>
       </MDBNavbar>

@@ -1,13 +1,26 @@
-import React from 'react';
+import React,{ Component } from 'react';
 import './CreateEvent.css'
 import CustomizedSteppers from './CustomizedSteppers'
-function CreateEvent() {
+import {loadUser} from '../../actions/AuthActions'
+import { connect } from 'react-redux';
+  class CreateEvent extends Component{
+    componentDidMount() {
+      this.props.loadUser()
+    }
+    
+    componentWillReceiveProps = (nextProps) => {
+      this.setState(nextProps.auth.user)
+    }
+  render(){
   return (
     <div className='create-event'>
-      {console.log(window.location.href)}
       <CustomizedSteppers/>
     </div>
   );
 }
+  }
 
-export default CreateEvent;
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+export default connect(mapStateToProps,{loadUser})(CreateEvent);

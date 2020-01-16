@@ -15,7 +15,9 @@ export const REMOVE_ALERT='REMOVE_ALERT'
 export const EDIT_PROFIL='EDIT_PROFIL'
 export const GET_PROFIL='GET_PROFIL'
 export const ERROR_PROFIL='ERROR_PROFIL'
-/////////////////event
-export const PARTICIPATE_EVENT = 'PARTICIPATE_EVENT'
-export const ADD_PARTICIPANT = 'ADD_PARTICIPANT'
+
+///////////////////event
+export const PARTICIPATE_EVENT='PARTICIPATE_EVENT'
+export const ADD_PARTICIPANT='ADD_PARTICIPANT'
+
 

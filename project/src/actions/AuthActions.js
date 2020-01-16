@@ -1,4 +1,4 @@
-import { REGISTER_SUCCES,REGISTER_FAIL,LOGIN_FAIL,LOGIN_SUCCES,USER_LODED,AUTH_ERROR,CLEAR_ERROR,LOGOUT} from './types'
+import { EDIT_PROFIL, REGISTER_SUCCES,REGISTER_FAIL,LOGIN_FAIL,LOGIN_SUCCES,USER_LODED,AUTH_ERROR,CLEAR_ERROR,LOGOUT} from './types'
 import axios from 'axios'
 import setAuthToken from '.././utils/setAuthToken'
 
@@ -70,4 +70,22 @@ export const clearError=()=>dispatch=>{
     dispatch({
         type:CLEAR_ERROR  
     })
+}
+
+
+// edit profil
+export const editProfil = newInfo => dispatch=>{
+    axios.put(`/api/user/${newInfo._id}`, newInfo)
+        .then(res => dispatch({
+            type: EDIT_PROFIL,
+            payload: res.data
+        }))
+}
+// edit profil
+export const followEvent = newInfo => dispatch=>{
+    axios.put(`/api/user/events/${newInfo._id}`, newInfo)
+        .then(res => dispatch({
+            type: EDIT_PROFIL,
+            payload: res.data
+        }))
 }

@@ -1,3 +1,4 @@
+
 import {ADD_EVENT,ADD_EVENTS, READ_EVENTS, ADD_PARTICIPANT} from './EventsTypes'
 import axios from 'axios'
 import { ADD_PARTICIPANT } from './types'
@@ -32,9 +33,21 @@ export const readEvents = () => dispatch => {
             'Content-Type' : 'application/json'
         }
     }
-    axios.get('api/event', config)
+       axios.get('api/event', config)
     .then(res => dispatch({
         type:READ_EVENTS,
         payload: res.data
     }))
 }
+
+}
+export const addParticipant = (participantId , eventId) => {
+    return {
+        type: ADD_PARTICIPANT,
+        payload: {participantId ,eventId }
+    }
+}
+
+
+
+

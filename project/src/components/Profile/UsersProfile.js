@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { MDBInput, MDBIcon } from "mdbreact";
+import{edit}from "../../actions/ProfilAction"
+import{loadUser,editProfil}from "../../actions/AuthActions"
 // import {connect} from 'react-redux'
 // import{setAlert,removeAlert} from '../../actions/AlertAction'
 // import {getProfil,editProfil }from '../../actions/ProfilAction'
@@ -11,15 +13,14 @@ class UsersProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Image: "",
+     
       FirstName: "",
       LastName: "",
       Email: "",
-      Password: "",
+      // Password: "",
       Address: "",
       Age: "",
-      PhoneNumber: "",
-      tags: []
+      Tags: []
     };
   }
 
@@ -28,38 +29,30 @@ class UsersProfile extends Component {
   };
 
   getInterest = e => {
-    this.setState({ tags: this.state.tags.concat(e.target.value) });
+    this.setState({ Tags: this.state.Tags.concat(e.target.value) });
   };
-  //     registerNow=()=>{
-  //          if (this.state.profil.FirstName===''|| this.state.profil.LastName===''|| this.state.profil.Email===''|| this.state.profil.Password===''|| this.state.profil.Address==='')
-  //     { let id=uuid()
-  //     this.props.setAlert('all feilds are required','danger',id)
-  //     setTimeout(()=> { this.props.removeAlert(id)
-  //          },5000);
-  //    }else{ this.props.register(
-  //     {   FirstName: this.state.FirstName,
-  //         LastName: this.state.LastName,
-  //         Email:this.state.Email,Password:this.state.Password,
-  //         Address:this.state.Address}
-  // )
+  update= e =>{
+    e.preventDefault()  
+    this.props.edit({
+      FirstName: this.state.FirstName,
+      LastName: this.state.LastName,
+      Email: this.state.Email,
+      Password: this.state.Password,
+      Address:this.state.Address,
+      Age:this.state.Age,
+      Tags:this.state.Tags
 
-  //    }
-
-  // }
-  // componentWillReceiveProps(nextProps){
-  //     if(nextProps.auth.isAuthenticated){
-  //         this.props.history.push('/')
-  //     }
-  //     if(nextProps.auth.error=== 'User already exists')
-  //  {   let id=uuid()
-  // this.props.setAlert(nextProps.auth.error,"danger",id)
-  // setTimeout(()=> { this.props.removeAlert(id)
-  //     this.props.clearError()
-  // },5000);
-  // }
-  // }
+  })}
+  componentDidMount() {
+    this.props.loadUser()
+  }
+  
+  componentWillReceiveProps = (nextProps) => {
+    this.setState(nextProps.auth.user)
+  }
+  
   render() {
-    const tags = [
+    const Tags = [
       "Music",
       "Health",
       "Travel",
@@ -107,14 +100,6 @@ class UsersProfile extends Component {
               />
               <MDBInput
                 className="inputprofile"
-                label="Password"
-                value={this.state.Password}
-                onChange={this.handleChange}
-                name="Password"
-                icon="key"
-              />
-              <MDBInput
-                className="inputprofile"
                 label="Address"
                 value={this.state.Address}
                 onChange={this.handleChange}
@@ -126,7 +111,7 @@ class UsersProfile extends Component {
                 label="Age"
                 value={this.state.Age}
                 onChange={this.handleChange}
-                name="Address"
+                name="Age"
                 icon="heart"
               />
               {/* <MDBInput className='inputprofile' label="PhoneNumber" value={this.state.PhoneNumber} onChange={this.handleChange} name="PhoneNumber"icon="phone"  /> */}
@@ -140,28 +125,32 @@ class UsersProfile extends Component {
                 others.
               </p>
               <div className="tags">
-                <label for="pet-select">Choose an interest:</label><br/>
-
                 <select name="pets" id="pet-select" onChange={this.getInterest}>
-                  <option value="">--Please choose an option--</option>
-                  {tags.map(el => (
+                  <option value="">Choose an interest</option>
+                  {Tags.map(el => (
                     <option value={el}>{el}</option>
                   ))}
                 </select>
                 <div>
-                  {this.state.tags.map(el => (
+                  {this.state.Tags.length > 0 ? this.state.Tags.map(el => (
+                    <button className="buttonTags">{el}</button>
+                  )) : this.state.Tags.map(el => (
                     <button className="buttonTags">{el}</button>
                   ))}
                 </div>
               </div>
             </div>
+            <h2 className="tittle2">Followed events</h2>
           </div>
         </div>
         <div className="twpbutton">
-          <button className="reset" onClick={this.registerNow}>
+          <button className="reset" >
             Reset
           </button>
-          <button className="update" onClick={this.registerNow}>
+          <button className="update"onClick={
+            () => this.props.editProfil(this.state)
+            // this.upadate
+            }>
             Upadate
           </button>
         </div>
@@ -170,8 +159,8 @@ class UsersProfile extends Component {
   }
 }
 const mapStateToProps = state => ({
-  profil: state.profil
+  auth: state.auth
 });
 
-export default connect(mapStateToProps)(UsersProfile);
+export default connect(mapStateToProps,{edit,loadUser, editProfil})(UsersProfile);
 // {getProfil,editProfil}

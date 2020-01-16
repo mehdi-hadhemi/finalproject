@@ -6,7 +6,7 @@
     background-position: center;
     height: 400px;
     width: 100%;
-    margin-top: 60px;
+   
     text-align: center;
     filter: blur(4px);
     margin-bottom: 75px;
@@ -14,7 +14,7 @@
 .background-image{
     font-size: 2.5rem;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 6%;
     /* background-image: url(https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79043845%2F235…s&q=75&sharp=10&rect=0%2C30%2C960%2C480&s=c3dd214…); */
     width: 754px;
@@ -27,7 +27,7 @@
     width: 316px;
     background: #F9F8FE;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 62%;
 
 }
@@ -105,3 +105,14 @@
    position: absolute;
    color: #ff4552 ;
 }
+
+
+.heart{
+    border: none;
+    background: white;
+    margin-left: 35px;
+}
+.fa-heart:before{
+    font-size: 33px;
+}
+
