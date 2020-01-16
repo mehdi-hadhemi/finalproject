@@ -9,6 +9,7 @@ import EventList from "../EventList";
 import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { addFilter } from "../../actions/EventsActions";
+
 // import EventList from '../EventList'
 class main extends React.Component {
   constructor(props) {
@@ -22,9 +23,11 @@ class main extends React.Component {
   step1Text = (name, value) => {
     this.setState({ [`${name}`]: value });
   };
+ 
   render() {
     return (
       <div className="Search">
+        <img style={{width:'100%'}}  src='http://www.fairact.in/wp-content/uploads/2018/04/events-bg.jpg' alt=''/>
         <h6>When do you want to go out </h6>
         <CalendarModal step1Text={(x, y) => this.step1Text(x, y)} />
         <h6>Where do you want to go out</h6>

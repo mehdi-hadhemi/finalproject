@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { ModalResrevation } from "./ModalReservation";
 import { addParticipant } from '../actions/EventsActions'
 import "./events.css";
-
+import {loadUser} from '../actions/AuthActions'
 class EventInfo extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +10,13 @@ class EventInfo extends Component {
       event: {},
       noP: 0
     };
+  }
+  componentDidMount() {
+    this.props.loadUser()
+  }
+  
+  componentWillReceiveProps = (nextProps) => {
+    this.setState(nextProps.auth.user)
   }
 
   componentDidMount = () => {
@@ -104,4 +110,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapstatetoprops ,mapDispatchToProps)(EventInfo);
+export default connect(mapstatetoprops ,(mapDispatchToProps,{loadUser}))(EventInfo);
