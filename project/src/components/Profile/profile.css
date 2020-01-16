@@ -60,7 +60,7 @@
 
 }
 .update{
-  background-color: #ff4552;
+  background-color: #ff4552!important;
   padding: 1%;
   border-radius: 5px;
   color: white;

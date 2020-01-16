@@ -25,7 +25,6 @@ import {connect} from 'react-redux'
    
     }
 
-
      handleSelect = (selectedIndex, e) => {
       this.setState({index: selectedIndex})
      }
@@ -49,7 +48,6 @@ import {connect} from 'react-redux'
           src={this.state.img2}
           alt="Second slide"
         />
-
     
       </Carousel.Item>
       <Carousel.Item>
@@ -90,7 +88,6 @@ import {connect} from 'react-redux'
           src={this.state.img7}
           alt="Third slide"
         />
-
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

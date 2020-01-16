@@ -25,6 +25,7 @@ class main extends React.Component {
   render() {
     return (
       <div className="Search">
+
         <img style={{width:'100%'}}  src='http://www.fairact.in/wp-content/uploads/2018/04/events-bg.jpg' alt=''/>
         <div className='filter-bar'>
         <h6>When do you want to go out </h6>
