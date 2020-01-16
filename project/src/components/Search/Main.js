@@ -34,16 +34,12 @@ class main extends React.Component {
         <LocationSearch step1Text={(x, y) => this.step1Text(x, y)} />
         <h6>What are you interested in </h6>
         <CategorySelection step1Text={(x, y) => this.step1Text(x, y)} />
-        <Button onClick={() => this.props.Filter(this.state)}>Filter</Button>
+        {/* <Button onClick={() => this.props.Filter(this.state)}>Filter</Button> */}
         <EventList filter={this.state} />
       </div>
     );
   }
 }
-const mapDispatchToProps = dispatch => {
-  return {
-    Filter: x => dispatch(addFilter(x))
-  };
-};
 
-export default connect(null, mapDispatchToProps)(main);
+
+export default main;
