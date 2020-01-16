@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { MDBInput, MDBIcon } from "mdbreact";
+import { MDBInput, MDBBtn } from "mdbreact";
 import{edit}from "../../actions/ProfilAction"
 import{loadUser,editProfil}from "../../actions/AuthActions"
 // import {connect} from 'react-redux'
@@ -150,7 +150,7 @@ class UsersProfile extends Component {
           <button className="update"onClick={
             () => this.props.editProfil(this.state)
             // this.upadate
-            }>
+            } link to='/' >
             Upadate
           </button>
         </div>

@@ -107,9 +107,9 @@
 }
 
 
-.heart{
+.heart {
     border: none;
-    background: white;
+    background: white!important;
     margin-left: 35px;
 }
 .fa-heart:before{

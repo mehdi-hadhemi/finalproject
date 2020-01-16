@@ -19,7 +19,7 @@ import Location from './Location'
 import Sponsoring from './Sponsoring'
 // import {Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {addEvent, addEvents } from '../../actions/EventsActions'
+import { addEvents } from '../../actions/EventsActions'
 import uuid from 'uuid'
 import { MDBBtn } from 'mdbreact';
 

@@ -2,17 +2,22 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addParticipant } from '../actions/EventsActions'
 import "./events.css";
-import {loadUser} from '../actions/AuthActions'
+import {loadUser } from '../actions/AuthActions'
+import {readEvents} from '../actions/EventsActions'
 class EventInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      event: {},
-      noP: 0
+      event: {
+        image:"dzedzedzedzedzed"
+      },
+      noP: 0,
+      participants:[]
     };
   }
   componentDidMount() {
     this.props.loadUser()
+    this.props.readEvents()
   }
   
   componentWillReceiveProps = (nextProps) => {
@@ -22,47 +27,47 @@ class EventInfo extends Component {
   componentDidMount = () => {
     console.log(this.props);
     this.setState({
-      event: this.props.event.events.filter(
-        el => String(el.id) === String(this.props.match.params.id)
+      event: this.props.event.filter(
+        el => String(el._id) === String(this.props.match.params.id)
       )[0]
-    } , () => {this.setState({ noP : this.state.event.participants.length})});
+    } 
+    , () => {this.setState({ noP : this.state.participants.length})}
+  );
   };
-
+  
   render() { 
+    console.log(this.props)
     return (
       <div>
         <div
-          style={{ backgroundImage: `url(${this.state.event.image})` }}
+          style={{ backgroundImage: `url(${this.state.event.img})` }}
           className="background-event"
         >
         </div>
 
         <div
-          style={{ backgroundImage: `url(${this.state.event.image})` }}
+          style={{ backgroundImage: `url(${this.state.event.img})` }}
           className="background-image"
         >
         </div>
-        {/* <img src={this.state.event.image} alt=''/> */}
         <div className="time-adress">
           <h2 className="eventdate">{this.state.event.startingDate}</h2>
           <h4 className="eventtitle">{this.state.event.tittle}</h4>
           <p className="eventadress">{this.state.event.city}</p>
           <button
             className="btn btn-outline-primary"
-            onClick={this.state.event.maxParticipants > this.state.noP ?() => this.props.addNewParticipant(this.props.auth.user._id , this.state.event.id) : ()=>alert("sold Out")}
+            onClick={this.state.event.maxparticipent > this.state.noP ?() => this.setState({noP : this.state.noP+1}) : ()=>alert("sold Out")}
+            // onClick={this.state.event.maxparticipent > this.state.noP ?() => this.props.addNewParticipant(this.props.auth.user._id , this.state.event.id) : ()=>alert("sold Out")}
           >
             reservation
           </button>
-          <h6>Palces left:{(this.state.event.maxParticipants)-( this.state.noP)}</h6>
+          <h6>Palces left:{Number(this.state.event.maxparticipent)-(this.state.noP)}</h6>
     
         </div>
-        {/* <div>
-                        <button icon="heart"></button>
-                        </div>   */}
+        
         <div className="event-desc">
           <div>
             <h2  className="about">
-              {" "}
               About this event
             </h2>
             <h4
@@ -110,4 +115,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapstatetoprops ,(mapDispatchToProps,{loadUser}))(EventInfo);
+export default connect(mapstatetoprops ,(mapDispatchToProps,{loadUser},{readEvents}))(EventInfo);

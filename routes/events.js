@@ -28,7 +28,7 @@ router.post('/',
         if (!errors.isEmpty()){
             return req.json({errors:errors.array()})
     }
-    const {tittle ,date,endingHour,startingHour,city,adresse,maxparticipent,price,description,organizer, img,tags}=req.body
+    const {tittle ,date,endingHour,startingHour,city,adresse,maxparticipent,price,description,organizer, img,tags,sponsored}=req.body
     const newEvent= new Event({
         tittle,
         date,
@@ -41,7 +41,8 @@ router.post('/',
         price,
         maxparticipent,
         img,
-        tags
+        tags,
+        sponsored
         // user:req.user.id
     })
     newEvent.save()

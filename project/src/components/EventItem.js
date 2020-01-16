@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 
 const EventItem = props => {
   const likedevent=[];
+  console.log(props)
   return (
     <div className="cards-container">
       <Card style={{ width: "18rem" }}>
@@ -17,7 +18,7 @@ const EventItem = props => {
             {props.event.adresse}
           </Card.Text>
           <div>
-          <Link to={`/event/${props.event.id}`}>
+          <Link to={`/event/${props.event._id}`}>
             <Button variant="primary">learn more</Button>
           </Link>
           <button className='heart'><i onClick={() => props.followEvent({...props.event, ...props.auth})} class="far fa-heart"></i></button>
@@ -29,7 +30,7 @@ const EventItem = props => {
   );
 };
 const mapstatetoprops = state => {
-  return { event: state.event, auth: state.auth };
+  return { events: state.event, auth: state.auth };
 };
 
 
