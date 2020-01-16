@@ -1,5 +1,5 @@
 
-import {ADD_EVENT,ADD_EVENTS, READ_EVENTS, ADD_PARTICIPANT} from './EventsTypes'
+import {ADD_EVENT,ADD_EVENTS, READ_EVENTS} from './EventsTypes'
 import axios from 'axios'
 import { ADD_PARTICIPANT } from './types'
 export const addEvent = newEvent =>{
@@ -9,12 +9,12 @@ export const addEvent = newEvent =>{
 
     }
 }
-export const addParticipant = (participantId, eventID)=> {
-    return{
-        type: ADD_PARTICIPANT,
-        payload: {participantId, eventID}
-    }
-}
+// export const addParticipant = (participantId, eventID)=> {
+//     return{
+//         type: ADD_PARTICIPANT,
+//         payload: {participantId, eventID}
+//     }
+// }
 export const addEvents = newEvents => dispatch =>{
     const config ={
         headers: {
@@ -40,7 +40,7 @@ export const readEvents = () => dispatch => {
     }))
 }
 
-}
+
 export const addParticipant = (participantId , eventId) => {
     return {
         type: ADD_PARTICIPANT,

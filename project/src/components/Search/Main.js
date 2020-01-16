@@ -26,12 +26,14 @@ class main extends React.Component {
     return (
       <div className="Search">
         <img style={{width:'100%'}}  src='http://www.fairact.in/wp-content/uploads/2018/04/events-bg.jpg' alt=''/>
+        <div className='filter-bar'>
         <h6>When do you want to go out </h6>
         <CalendarModal step1Text={(x, y) => this.step1Text(x, y)} />
         <h6>Where do you want to go out</h6>
         <LocationSearch step1Text={(x, y) => this.step1Text(x, y)} />
         <h6>What are you interested in </h6>
         <CategorySelection step1Text={(x, y) => this.step1Text(x, y)} />
+        </div>
         {/* <Button onClick={() => this.props.Filter(this.state)}>Filter</Button> */}
         <EventList filter={this.state} />
       </div>

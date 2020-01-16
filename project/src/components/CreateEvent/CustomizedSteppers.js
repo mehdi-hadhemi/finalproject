@@ -19,9 +19,10 @@ import Location from './Location'
 import Sponsoring from './Sponsoring'
 // import {Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {addEvent, addEvents } from '../../actions/EventsActions'
+import { addEvents } from '../../actions/EventsActions'
 import uuid from 'uuid'
 import { MDBBtn } from 'mdbreact';
+import {MDBNavLink} from 'mdbreact'
 
 
 const QontoConnector = withStyles({
@@ -207,7 +208,6 @@ class CustomizedSteppers extends React.Component{
             date: [],
             adresse: '',
             city: '',
-          
             startingHour:'',
             endingHour:'',
             img: '',
@@ -260,7 +260,7 @@ render(){
           <div>
             <Typography className={useStyles.instructions}>
             <Sponsoring   step1Text={(x,y) => this.step1Text(x,y)}/>
-            <MDBBtn id='submit' onClick={()=> this.props.addEvents({...this.state, id: uuid(), date :[...this.state.date, '1']})}>Submit your event</MDBBtn>
+            <MDBBtn href='/' id='submit' to='/' onClick={()=> this.props.addEvents({...this.state, id: uuid(), date :[...this.state.date, '1']})}>Submit your event</MDBBtn>
             </Typography>
             <Button onClick={this.handleReset} className={useStyles.button}>
               Reset
